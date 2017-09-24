@@ -16,7 +16,7 @@
     <nav class="main-nav">
       <ul class="main-nav-list">
         <li class="main-nav-list__item">
-          <a class="main-nav-list__item--link" href="#">Каталог товаров</a>
+          <a class="main-nav-list__item--link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav-list__item">
           <a class="main-nav-list__item--link" href="#">Вязание на заказ</a>
@@ -32,6 +32,79 @@
   </header>
 
   <main>
+    <h1 class="form-page-title">Вязание на заказ</h1>
+    <p class="form-page-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+    <form class="custom-craft-info" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="custom-craft-info__type-field">
+        <legend class="custom-craft-info__field-legend">ТИП</legend>
+        <input class="custom-craft-info__type-field--radio-input" type="radio" name="product-type" value="interior-accessory" id="interior-accessory" checked>
+        <label class="custom-craft-info__type-field--radio-label" for="interior-accessory">Аксессуар для дома</label><br>
+        <input class="custom-craft-info__type-field--radio-input" type="radio" name="product-type" value="kids-toy" id="kids-toy">
+        <label class="custom-craft-info__type-field--radio-label" for="kids-toy">Детская игрушка</label>
+      </fieldset>
+      <fieldset class="custom-craft-info__color-field">
+        <legend class="custom-craft-info__color-field--legend">Цвет:</legend>
+        <ul class="custom-craft-info__color-field--list">
+          <li class="custom-craft-info__color-field--list-item">
+            <input class="custom-craft-info__color-field--input" type="checkbox" name="color-white" id="white" checked>
+            <label class="custom-craft-info__color-field--label" for="white">Белый</label>
+          </li>
+          <li class="custom-craft-info__color-field--list-item">
+            <input class="custom-craft-info__color-field--input" type="checkbox" name="color-gray" id="gray" checked>
+            <label class="custom-craft-info__color-field--label" for="gray">Серый</label>
+          </li>
+          <li class="custom-craft-info__color-field--list-item">
+            <input class="custom-craft-info__color-field--input" type="checkbox" name="color-tiffany" id="tiffany">
+            <label class="custom-craft-info__color-field--label" for="tiffany">&#171;Тиффани&#187;</label>
+          </li>
+          <li class="custom-craft-info__color-field--list-item">
+            <input class="custom-craft-info__color-field--input" type="checkbox" name="color-black" id="black">
+            <label class="custom-craft-info__color-field--label" for="black">Черный</label>
+          </li>
+          <li class="custom-craft-info__color-field--list-item">
+            <input class="custom-craft-info__color-field--input" type="checkbox" name="color-pink" id="pink">
+            <label class="custom-craft-info__color-field--label" for="pink">Розовый</label>
+          </li>
+          <li class="custom-craft-info__color-field--list-item">
+            <input class="custom-craft-info__color-field--input" type="checkbox" name="color-orange" id="orange">
+            <label class="custom-craft-info__color-field--label" for="orange">Оранжевый</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="custom-craft-info__name-field">
+        <legend class="custom-craft-info__field-legend">ФИО</legend>
+        <ul class="custom-craft-info__name-field--list">
+          <li class="custom-craft-info__name-field--list-item">
+            <label class="custom-craft-info__name-field--label" for="first-name">Имя:</label><br>
+            <input class="custom-craft-info__name-field--input" name="name" id="first-name" type="text" placeholder="Введите ваше имя*" required>
+          </li>
+          <li class="custom-craft-info__name-field--list-item">
+            <label class="custom-craft-info__name-field--label" for="last-name">Фамилия:</label><br>
+            <input class="custom-craft-info__name-field--input" id="last-name" name="last-name" type="text" placeholder="Укажите фамилию*" required>
+          </li>
+          <li class="custom-craft-info__name-field--list-item">
+            <label class="custom-craft-info__name-field--label" for="patronymic">Отчество:</label><br>
+            <input class="custom-craft-info__name-field--input" id="patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="custom-craft-info__phone-field">
+        <legend class="custom-craft-info__field-legend">ТЕЛ</legend>
+        <input class="custom-craft-info__phone-field--input" type="number" name="phone-number" placeholder="+7 XXX XX XX*" required>
+      </fieldset>
+      <fieldset class="custom-craft-info__email-field">
+        <legend class="custom-craft-info__field-legend">E-MAIL</legend>
+        <input class="custom-craft-info__email-field--input" type="email" name="e-mail" placeholder="Ваш Email*" required>
+      </fieldset>
+      <fieldset class="custom-craft-info__additional-info-field">
+        <legend class="custom-craft-info__field-legend">ДОП</legend>
+        <input class="custom-craft-info__additional-info-field--input" type="text" name="additional-info" placeholder="Опишите все ваши пожелания к заказу"><br>
+        <span class="custom-craft-info__additional-info-field--span">*Поля обязательные для заполнения</span>
+        <br>
+        <button class="custom-craft-info__submit-btn" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+      </fieldset>
+    </form>
+
   </main>
 
   <footer class="page-footer">
