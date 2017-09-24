@@ -58,7 +58,24 @@
           <span>1 500</span> руб.
         </strong>
       </li>
+      <li class="catalog-list__list-item">
+        <h3 class="catalog-list__list-item--item-title catalog-content">Процесс производства</h3>
+        <img src="http://placehold.it/150x100" width="150" height="100" alt="Как мы вяжем">
+        <p class="catalog-list__list-item--item-details catalog-content">По просьбе наших любимых фолловеров мы сняли для вас видео о том, как появляются наши товары.</p>
+        <a class="catalog-list" href="form.html">СДЕЛАТЬ ЗАКАЗ</a>
+      </li>
+      <!--Является ли последний блок частью списка? И будет ли изображение настоящим видео в финале проекта?-->
     </ul>
+    <div class="modal-add-cart visually-hidden">
+      <h2 class="modal-add-cart__title">Добавить в корзину</h2>
+      <p class="modal-add-cart__text">Выберите размер</p>
+      <form class="modal-add-cart__size-chart" method="get" action="https://echo.htmlacademy.ru">
+        <input class="modal-add-cart__size-chart--radio" type="radio" name="product-size" value="S">S<br>
+        <input class="modal-add-cart__size-chart--radio" type="radio" name="product-size" value="M">M<br>
+        <input class="modal-add-cart__size-chart--radio" type="radio" name="product-size" value="L">L<br>
+        <button type="submit">Добавить</button>
+      </form>
+    </div>
   </main>
 
   <footer class="page-footer">
