@@ -10,97 +10,94 @@
 <body>
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo--img" src="http://placehold.it/150x100" width="150" height="100" alt="Магазин &#34;Мишка&#34;">
+      <img class="page-header__img" src="http://placehold.it/150x100" width="150" height="100" alt="Магазин &#34;Мишка&#34;">
     </a>
     <button class="page-header__button toggle-closed" type="button"></button>
     <nav class="main-nav">
       <ul class="main-nav-list">
         <li class="main-nav-list__item">
-          <a class="main-nav-list__item--link" href="#">Каталог товаров</a>
+          <a class="main-nav-list__link" href="#">Каталог товаров</a>
         </li>
         <li class="main-nav-list__item">
-          <a class="main-nav-list__item--link" href="#">Вязание на заказ</a>
+          <a class="main-nav-list__link" href="#">Вязание на заказ</a>
         </li>
         <li class="main-nav-list__item">
-          <a class="main-nav-list__item--link" href="#">Поиск по сайту</a>
+          <a class="main-nav-list__link" href="#">Поиск по сайту</a>
         </li>
         <li class="main-nav-list__item">
-          <a class="main-nav-list__item--link" href="#">Корзина:<span>пока пуста</span></a>
+          <a class="main-nav-list__link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1 class="catalog-page-title">Каталог товаров</h1>
+    <h1 class="catalog-title">Каталог товаров</h1>
     <ul class="catalog-list">
       <li class="catalog-list__list-item">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Вязаный заяц">
-        <h3 class="catalog-list__list-item--item-title catalog-content">Зайчик-попрыгайчик</h3>
-        <p class="catalog-list__list-item--item-details catalog-content">Рост 30 см, вес 200г</p>
-        <strong class="catalog-list__list-item--item-price catalog-content">
-          <span>1 200</span> руб.
-        </strong>
+        <article class="catalog-item">
+          <img class="catalog-item__img" src="http://placehold.it/150x100" width="150" height="100" alt="Вязаный заяц">
+          <h3 class="catalog-item__title">Зайчик-попрыгайчик</h3>
+          <p class="catalog-item__details">Рост 30 см, вес 200г</p>
+          <span class="catalog-item__price">1 200 руб.</span>
+        </article>
       </li>
       <li class="catalog-list__list-item">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Вязаная корзинка">
-        <h3 class="catalog-list__list-item--item-title catalog-content">Корзинка для белья</h3>
-        <p class="catalog-list__list-item--item-details catalog-content">Диаметр 15 см, высота 10 см</p>
-        <strong class="catalog-list__list-item--item-price catalog-content">
-          <span>690</span> руб.
-        </strong>
+        <article class="catalog-item">
+          <img class="catalog-item__img" src="http://placehold.it/150x100" width="150" height="100" alt="Вязаная корзинка">
+          <h3 class="catalog-item__title">Корзинка для белья</h3>
+          <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
+          <span class="catalog-item__price">690 руб.</span>
+        </article>
       </li>
       <li class="catalog-list__list-item">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Большая вязаная корзинка">
-        <h3 class="catalog-list__list-item--item-title catalog-content">Большая корзинка для игрушек</h3>
-        <p class="catalog-list__list-item--item-details catalog-content">Диаметр 30 см, высота 30см</p>
-        <strong class="catalog-list__list-item--item-price catalog-content">
-          <span>1 500</span> руб.
-        </strong>
+        <article class="catalog-item">
+          <img class="catalog-item__img" src="http://placehold.it/150x100" width="150" height="100" alt="Большая вязаная корзинка">
+          <h3 class="catalog-item__title">Большая корзинка для игрушек</h3>
+          <p class="catalog-item__details">Диаметр 30 см, высота 30см</p>
+          <span class="catalog-item__price">1 500 руб.</span>
+        </article>
       </li>
-      <li class="catalog-list__list-item">
-        <h3 class="catalog-list__list-item--item-title catalog-content">Процесс производства</h3>
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Как мы вяжем">
-        <p class="catalog-list__list-item--item-details catalog-content">По просьбе наших любимых фолловеров мы сняли для вас видео о том, как появляются наши товары.</p>
-        <a class="catalog-list" href="form.html">СДЕЛАТЬ ЗАКАЗ</a>
-      </li>
-      <!--Является ли последний блок частью списка? И будет ли изображение настоящим видео в финале проекта?-->
     </ul>
-    <div class="modal-add-cart visually-hidden">
-      <h2 class="modal-add-cart__title">Добавить в корзину</h2>
-      <p class="modal-add-cart__text">Выберите размер</p>
-      <form class="modal-add-cart__size-chart" method="get" action="https://echo.htmlacademy.ru">
-        <input class="modal-add-cart__size-chart--radio" type="radio" name="product-size" value="S">S<br>
-        <input class="modal-add-cart__size-chart--radio" type="radio" name="product-size" value="M">M<br>
-        <input class="modal-add-cart__size-chart--radio" type="radio" name="product-size" value="L">L<br>
-        <button type="submit">Добавить</button>
+    <article class="video-about">
+      <h3 class="video-about__title">Процесс производства</h3>
+      <img class="video-about__img" src="http://placehold.it/150x100" width="150" height="100" alt="Как мы вяжем">
+      <p class="video-about__text">По просьбе наших любимых фолловеров мы сняли для вас видео о том, как появляются наши товары.</p>
+      <a class="video-about__link" href="form.html">СДЕЛАТЬ ЗАКАЗ</a>
+    </article>
+    <div class="modal visually-hidden">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер</p>
+      <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
+        <input class="modal__radio" type="radio" name="product-size" value="S">S<br>
+        <input class="modal__radio" type="radio" name="product-size" value="M">M<br>
+        <input class="modal__radio" type="radio" name="product-size" value="L">L<br>
+        <button class="modal__submit" type="submit">Добавить</button>
       </form>
     </div>
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__social-links">
-      <ul>
-        <li>
-          <a class="page-footer__social-links--ref page-footer__ref-instagram" title="Instagram" href="#">
-            <svg></svg>
-          </a>
-        </li>
-        <li>
-          <a class="page-footer__social-links--ref page-footer__ref-facebook" title="Facebook" href="#">
-            <svg></svg>
-          </a>
-        </li>
-        <li>
-          <a class="page-footer__social-links--ref page-footer__ref-twitter" title="Twitter" href="#">
-            <svg></svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <p class="page-footer__copyright">
-      <span class="page-footer__copyright--title">Разработано</span>
-      <a title="HTML Academy" href="https://htmlacademy.ru/intensive/adaptive">
+    <ul class="social">
+      <li class="social__item">
+        <a class="social__link social__link--instagram" title="Instagram" href="#">
+          <svg></svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" title="Facebook" href="#">
+          <svg></svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--twitter" title="Twitter" href="#">
+          <svg></svg>
+        </a>
+      </li>
+    </ul>
+    <p class="copyright">
+      <span class="copyright__title">Разработано</span>
+      <a class="copyright__link" title="HTML Academy" href="https://htmlacademy.ru/intensive/adaptive">
         <svg></svg>
       </a>
     </p>
