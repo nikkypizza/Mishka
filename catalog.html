@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="page-header__logo" href="index.html">
+      <img class="page-header__img" src="http://placehold.it/150x100" width="150" height="100" alt="Магазин &#34;Мишка&#34;">
+    </a>
+    <button class="page-header__button btn-toggle" type="button"></button>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="#">Каталог товаров</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="#">Вязание на заказ</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="#">Поиск по сайту</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="catalog-title">Каталог товаров</h1>
+    <ul class="catalog-list">
+      <li class="catalog-list__item">
+        <article class="catalog-item">
+          <img class="catalog-item__img" src="http://placehold.it/150x100" width="150" height="100" alt="Вязаный заяц">
+          <h3 class="catalog-item__title">Зайчик-попрыгайчик</h3>
+          <p class="catalog-item__details">Рост 30 см, вес 200г</p>
+          <span class="catalog-item__price">1 200 руб.</span>
+        </article>
+      </li>
+      <li class="catalog-list__item">
+        <article class="catalog-item">
+          <img class="catalog-item__img" src="http://placehold.it/150x100" width="150" height="100" alt="Вязаная корзинка">
+          <h3 class="catalog-item__title">Корзинка для белья</h3>
+          <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
+          <span class="catalog-item__price">690 руб.</span>
+        </article>
+      </li>
+      <li class="catalog-list__item">
+        <article class="catalog-item">
+          <img class="catalog-item__img" src="http://placehold.it/150x100" width="150" height="100" alt="Большая вязаная корзинка">
+          <h3 class="catalog-item__title">Большая корзинка для игрушек</h3>
+          <p class="catalog-item__details">Диаметр 30 см, высота 30см</p>
+          <span class="catalog-item__price">1 500 руб.</span>
+        </article>
+      </li>
+    </ul>
+    <article class="video-about">
+      <h3 class="video-about__title">Процесс производства</h3>
+      <img class="video-about__img" src="http://placehold.it/150x100" width="150" height="100" alt="Как мы вяжем">
+      <p class="video-about__text">По просьбе наших любимых фолловеров мы сняли для вас видео о том, как появляются наши товары.</p>
+      <a class="video-about__link" href="form.html">СДЕЛАТЬ ЗАКАЗ</a>
+    </article>
+    <div class="modal visually-hidden">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер</p>
+      <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
+        <input class="modal__radio" type="radio" name="product-size" value="S">S<br>
+        <input class="modal__radio" type="radio" name="product-size" value="M">M<br>
+        <input class="modal__radio" type="radio" name="product-size" value="L">L<br>
+        <button class="modal__submit" type="submit">Добавить</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <ul class="social">
+      <li class="social__item">
+        <a class="social__link social__link--instagram" title="Instagram" href="#">
+          <svg></svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" title="Facebook" href="#">
+          <svg></svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--twitter" title="Twitter" href="#">
+          <svg></svg>
+        </a>
+      </li>
+    </ul>
+    <p class="copyright">
+      <span class="copyright__title">Разработано</span>
+      <a class="copyright__link" title="HTML Academy" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg></svg>
+      </a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
