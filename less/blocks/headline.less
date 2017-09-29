@@ -1,51 +1,51 @@
 .headline {
-  background-image: url("../../img/hero-mobile@1x.jpg");
+  background-image: url("../img/hero-mobile@1x.jpg");
   background-color: #fafafa;
   background-repeat: no-repeat;
+}
 
-  &__title {
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: bold;
-    font-size: 27px;
-    line-height: 30px;
-    color: #000000;
+.headline__title {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.headline__text {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #ffffff;
+
+  &:active {
+    color: #97e2d2;
   }
+}
 
-  &__text {
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
-    color: #ffffff;
+.headline__img {
+  background-color: transparent;
+}
 
-    &:active {
-      color: #97e2d2;
+.headline__link {
+  display: block;
+  height: 103px;
+  text-decoration: none;
+
+  &--interior {
+    background-color: #63d1bb;
+
+    &:hover {
+      background-color: #59d5bc;
     }
   }
 
-  &__img {
-    background-color: transparent;
-  }
+  &--toys {
+    background-color: #56c3b2;
 
-  &__link {
-    display: block;
-    height: 103px;
-    text-decoration: none;
-
-    &--interior {
-      background-color: #63d1bb;
-
-      &:hover {
-        background-color: #59d5bc;
-      }
-    }
-
-    &--toys {
-      background-color: #56c3b2;
-
-      &:hover {
-        background-color: #46c1ae;
-      }
+    &:hover {
+      background-color: #46c1ae;
     }
   }
 }
