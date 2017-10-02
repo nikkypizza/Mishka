@@ -1,8 +1,30 @@
 .catalog-list {
   background-color: #ffffff;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog-list__item {
   list-style: none;
-  padding-bottom: 30px;
+  margin: 20px auto;
+  width: 260px;
+}
+
+@media (min-width: @tablet-width) {
+
+  .catalog-list__item {
+    width: 91%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .catalog-list {
+    flex-direction: row;
+  }
+
+  .catalog-list__item {
+    width: 27%;
+  }
 }
