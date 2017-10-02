@@ -1,9 +1,14 @@
 .page-header {
   background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  min-height: 79px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .page-header__logo {
-  padding-left: 40px;
+  margin-left: 116px;
 }
 
 .page-header__img {
@@ -12,4 +17,28 @@
 
 .page-header__button {
   cursor: pointer;
+  margin-right: 31px;
+  padding-top: 16px;
+}
+
+@media (min-width: @tablet-width) {
+
+  .page-header {
+    min-height: 89px;
+  }
+
+  .page-header__button {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .page-header {
+    min-height: 89px;
+  }
+
+  .page-header__button {
+    display: none;
+  }
 }

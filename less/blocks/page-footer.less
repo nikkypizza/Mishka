@@ -1,3 +1,20 @@
 .page-footer {
   background-color: #f1f1f1;
+  min-height: 160px;
+}
+
+@media (min-width: @tablet-width) {
+
+  .page-footer {
+    min-height: 143px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .page-footer {
+    min-height: 143px;
+  }
 }

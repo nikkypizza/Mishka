@@ -1,6 +1,6 @@
 .feedback {
-  padding: 30px;
   background-color: #ffffff;
+  min-height: 800px;
 }
 
 .feedback__title {
@@ -9,6 +9,7 @@
   font-size: 18px;
   line-height: 30px;
   color: #000000;
+  margin-left: 30px;
 }
 
 .feedback__email {
@@ -17,6 +18,7 @@
   font-size: 15px;
   line-height: 30px;
   color: #444444;
+  margin-left: 30px;
 }
 
 .feedback__email-title {
@@ -35,6 +37,7 @@
   font-size: 15px;
   line-height: 30px;
   color: #444444;
+  margin-left: 30px;
 }
 
 .feedback__adress-title {
@@ -61,5 +64,100 @@
   border: 2px solid #444444;
   cursor: pointer;
   margin-top: 38px;
-  padding: 17px 51px;
+  margin-left: 30px;
+  padding: 14px 54px;
+}
+
+@media (min-width: @tablet-width) {
+
+  .feedback {
+    min-height: 900px;
+    margin-left: 18px;
+  }
+
+  .feedback__data {
+    display: flex;
+  }
+
+  .feedback__title {
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after {
+      content: "";
+      background-image: url(../img/icon-flag.svg);
+      background-repeat: no-repeat;
+      width: 47px;
+      height: 82px;
+      float: right;
+      padding-right: 50px;
+      margin-top: -15px;
+    }
+  }
+
+  .feedback__email-title {
+    display: inline-block;
+    width: 70px;
+  }
+
+  .feedback__adress-title {
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+    min-height: 10px;
+    margin-right: 6px;
+  }
+
+  .feedback__email {
+    font-size: 17px;
+  }
+
+  .feedback__adress {
+    display: flex;
+    width: 350px;
+    min-height: 100px;
+    font-size: 17px;
+  }
+
+  .feedback__map {
+    margin: 28px auto auto auto;
+  }
+
+  .feedback__btn {
+    margin-top: 55px;
+    margin-left: 250px;
+    padding: 14px 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .feedback {
+    min-height: 630px;
+  }
+
+  .feedback__title {
+    font-size: 53px;
+    line-height: 57px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      background-image: url(../img/icon-flag.svg);
+      background-repeat: no-repeat;
+      width: 47px;
+      height: 82px;
+      float: left;
+      margin-right: 60px;
+      margin-left: 14px;
+    }
+  }
+
+  .feedback__data {
+    flex-direction: column;
+    margin-left: 11%;
+  }
 }

@@ -1,6 +1,7 @@
 .comments {
-  padding: 30px;
+  padding: 0 30px 50px 30px;
   background-color: #ffffff;
+  min-height: 600px;
 }
 
 .comments__title {
@@ -8,6 +9,7 @@
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
+  margin-top: 15px;
   color: #000000;
 }
 
@@ -36,13 +38,21 @@
 }
 
 .comments__buttons {
-  margin-left: 10px;
+  display: flex;
+  height: 59px;
+}
+
+.comments__button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  border: 1px solid #ececec;
 }
 
 .comments__write {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 20px;
   text-transform: uppercase;
   color: #444444;
@@ -50,6 +60,81 @@
   text-decoration: none;
   border: 2px solid #444444;
   cursor: pointer;
-  margin-top: 38px;
-  padding: 17px 87px;
+  margin-top: 32px;
+  padding: 14px 82px;
+}
+
+@media (min-width: @tablet-width) {
+
+  .comments {
+    min-height: 525px;
+    background-image: url(../img/review@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
+  .comments__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-left: 18px;
+    padding-top: 74px;
+  }
+
+  .comments__text {
+    font-size: 17px;
+    margin: 0 19px;
+    padding-top: 11px;
+  }
+
+  .comments__author {
+    margin-left: 18px;
+  }
+
+  .comments__author-id {
+    margin-left: 18px;
+  }
+
+  .comments__write {
+    font-size: 17px;
+    margin: 0 18px;
+  }
+
+  .comments__buttons {
+    display: flex;
+    justify-content: flex-end;
+    height: 59px;
+  }
+
+  .comments__button {
+    background-color: transparent;
+    border: none;
+    width: 84px;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .comments {
+    min-height: 480px;
+  }
+
+  .comments__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin-left: 15%;
+    margin-top: 0;
+  }
+
+  .comments__text {
+    margin-left: 15%;
+  }
+
+  .comments__author {
+    margin-left: 15%;
+  }
+
+  .comments__author-id {
+    margin-left: 15%;
+  }
 }

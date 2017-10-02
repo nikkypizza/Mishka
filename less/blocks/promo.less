@@ -1,6 +1,9 @@
 .promo {
   background-color: #ffffff;
-  padding: 32px;
+  padding: 27px 31px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
 }
 
 .promo__title {
@@ -8,6 +11,8 @@
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
+  padding-bottom: 5px;
+  margin: 0;
   color: #000000;
 }
 
@@ -16,6 +21,7 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
+  margin: 0;
   text-transform: uppercase;
   color: #63d1bb;
 }
@@ -25,12 +31,14 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
-  text-align: center;
+  margin-top: 22px;
   color: #444444;
 }
 
 .promo__details {
   padding: 0;
+  width: 260px;
+  min-height: 107px;
 }
 
 .promo__details-text {
@@ -43,6 +51,13 @@
   border-bottom: 1px solid #ececec;
 }
 
+.promo__details-measure {
+  display: inline-block;
+  width: 95px;
+  vertical-align: middle;
+  padding-bottom: 10px;
+}
+
 .promo__image {
   background-color: #8bbfba;
 }
@@ -52,8 +67,10 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+  text-align: center;
   color: #444444;
-  padding: 0 70px 28px 70px;
+  margin-top: 25px;
+  padding: 0 60px 25px 60px;
 }
 
 .promo__order-link {
@@ -65,7 +82,7 @@
   color: #444444;
   text-decoration: none;
   border: 2px solid #444444;
-  padding: 18px 87px;
+  padding: 14px 83px;
 
   &:hover {
     background-color: #444444;
@@ -75,5 +92,81 @@
   &:active {
     background-color: #444444;
     color: #8d8d8d;
+  }
+}
+
+@media (min-width: @tablet-width) {
+
+  .promo {
+    min-height: 608px;
+    margin: 0 18px;
+    padding-top: 45px;
+  }
+
+  .promo__item-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .promo__description {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .promo__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .promo__price {
+    font-size: 20px;
+  }
+
+  .promo__subtitle {
+    line-height: 17px;
+    line-height: 17px;
+    width: 10%;
+    text-align: center;
+    margin-right: 33px;
+  }
+
+  .promo__image {
+    background-color: #8bbfba;
+    float: right;
+  }
+
+  .promo__order-link {
+    width: 114px;
+  }
+
+  .promo__buy {
+    display: flex;
+    width: 270px;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .promo {
+    min-height: 780px;
+    padding-bottom: 80px;
+  }
+
+  .promo__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .promo__subtitle {
+    margin-right: 33px;
+    margin-left: 0;
+  }
+
+  .promo__item-title {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: 80px;
   }
 }

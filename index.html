@@ -34,27 +34,33 @@
   <main>
     <section class="headline">
       <h1 class="headline__title">Милые штуки ручной работы для дома</h1>
-      <a class="headline__link headline__link--interior" href="#">
-        <p class="headline__text">Предметы интерьера</p>
-        <img class="headline__img" src="img/icon-interior.svg" width="41" height="63" alt="Интерьер">
-      </a>
-      <a class="headline__link headline__link--toys" href="#">
-        <p class="headline__text">Детские игрушки</p>
-        <img class="headline__img" src="img/icon-toy.svg" width="60" height="60" alt="Игрушки">
-      </a>
+      <div class="headline__link-container">
+        <a class="headline__link headline__link--interior" href="#">
+          <p class="headline__text">Предметы интерьера</p>
+          <img class="headline__img" src="img/icon-interior.svg" width="41" height="63" alt="Интерьер">
+        </a>
+        <a class="headline__link headline__link--toys" href="#">
+          <p class="headline__text">Детские игрушки</p>
+          <img class="headline__img" src="img/icon-toy.svg" width="60" height="60" alt="Игрушки">
+        </a>
+      </div>
     </section>
     <section class="promo">
-      <h2 class="promo__title">Вязаные корзинки</h2>
-      <h3 class="promo__subtitle">Товар недели</h3>
+      <div class="promo__item-title">
+        <h2 class="promo__title">Вязаные корзинки</h2>
+        <h3 class="promo__subtitle">Товар недели</h3>
+      </div>
       <p class="promo__description">Экологичная чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
       <ul class="promo__details">
-        <li class="promo__details-text"><span>Цвет: </span>&#171;Тиффани&#187;/серый</li>
-        <li class="promo__details-text"><span>Диаметр:</span> 25 см</li>
-        <li class="promo__details-text"><span>Высота:</span> 15 см</li>
+        <li class="promo__details-text"><span class="promo__details-measure">Цвет: </span>&#171;Тиффани&#187;/серый</li>
+        <li class="promo__details-text"><span class="promo__details-measure">Диаметр:</span> 25 см</li>
+        <li class="promo__details-text"><span class="promo__details-measure">Высота:</span> 15 см</li>
       </ul>
       <img class="promo__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаная корзинка цвета &#171;Тиффани&#187;/серый">
-      <p class="promo__price">Цена: <span>990</span> руб.</p>
-      <a href="#" class="promo__order-link">Заказать</a>
+      <div class="promo__buy">
+        <p class="promo__price">Цена: <span>990</span> руб.</p>
+        <a href="#" class="promo__order-link">Заказать</a>
+      </div>
     </section>
     <div class="modal visually-hidden">
       <h2 class="modal__title">Добавить в корзину</h2>
@@ -108,14 +114,16 @@
     </section>
     <section class="feedback">
       <h2 class="feedback__title">Контакты</h2>
-      <p class="feedback__email">
-        <span class="feedback__email-title">e-mail:</span>
-        <a class="feedback__email-adress" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-      </p>
-      <p class="feedback__adress">
-        <span class="feedback__adress-title">адрес:</span> г. Санкт-Петербург,<br> ул. Большая <br> Конюшенная,
-        <br> д. 19/8, офис 101
-      </p>
+      <div class="feedback__data">
+        <p class="feedback__email">
+          <span class="feedback__email-title">e-mail:</span>
+          <a class="feedback__email-adress" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        </p>
+        <p class="feedback__adress">
+          <span class="feedback__adress-title">адрес:</span> г. Санкт-Петербург,<br> ул. Большая Конюшенная,
+          <br> д. 19/8, офис 101
+        </p>
+      </div>
       <div class="feedback__map"></div>
       <button class="feedback__btn" type="button">Напишите нам</button>
     </section>
