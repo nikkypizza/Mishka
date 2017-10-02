@@ -13,10 +13,6 @@
   padding-bottom: 30px;
 }
 
-.color__input {
-  height: 20px;
-}
-
 .color__label {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: bold;
@@ -24,4 +20,17 @@
   line-height: 18px;
   color: #000000;
   padding-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+
+  .color {
+    min-height: 300px;
+    background-color: #f1f1f1;
+  }
+
+  .color__label {
+    font-size: 19px;
+    line-height: 18px;
+  }
 }
