@@ -68,12 +68,14 @@
 
 @media (min-width: @tablet-width) {
   .comments {
-    min-height: 525px;
+    min-height: 400px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: top left;
     max-width: @tablet-width;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .comments__title {
@@ -81,12 +83,18 @@
     line-height: 50px;
     margin-left: 50px;
     padding-top: 74px;
+    order: 1;
   }
 
   .comments__text {
     font-size: 17px;
     margin-left: 50px;
     padding-top: 11px;
+    order: 3;
+  }
+
+  .comments__authorship {
+    order: 4
   }
 
   .comments__author {
@@ -98,15 +106,21 @@
   }
 
   .comments__write {
-    width: 300px;
+    width: 175px;
+    height: 53px;
     font-size: 17px;
-    margin: 0 18px;
+    order: 2;
+    padding: 10px 0;
+    margin-left: auto;
+    margin-top: 90px;
   }
 
   .comments__buttons {
     display: flex;
     justify-content: flex-end;
     height: 59px;
+    order: 5;
+    margin-left: auto;
   }
 
   .comments__button {
