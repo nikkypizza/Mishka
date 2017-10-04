@@ -15,7 +15,8 @@
   font-size: 27px;
   line-height: 30px;
   color: #000000;
-  margin: 0 38px;
+  max-width: 320px;
+  margin: 0 auto;
   padding-bottom: 123px;
   text-align: center;
 }
@@ -45,6 +46,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
 
   &--interior {
     background-color: #63d1bb;
@@ -71,7 +74,7 @@
   .headline__title {
     font-size: 43px;
     line-height: 50px;
-    width: 500px;
+    max-width: 500px;
     padding-bottom: 372px;
     margin: 0 auto;
   }
@@ -83,29 +86,28 @@
 
   .headline__link-container {
     display: flex;
-    align-items: center;
-    margin: 0 50px;
+    width: 668px;
+    margin: 0 auto;
   }
 
   .headline__link {
-    width: 60%;
-    min-height: 119px;
+    width: 334px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .headline {
-    min-height: 745px;
-  }
-
   .headline__title {
     font-size: 53px;
     line-height: 57px;
-    width: 700px;
+    max-width: 620px;
     padding-bottom: 357px;
   }
 
   .headline__link-container {
-    margin: 0;
+    width: auto;
+  }
+
+  .headline__link {
+    width: 725px;
   }
 }

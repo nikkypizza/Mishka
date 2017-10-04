@@ -1,6 +1,8 @@
 .feedback {
   background-color: #ffffff;
   min-height: 800px;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .feedback__title {
@@ -70,16 +72,18 @@
 
 @media (min-width: @tablet-width) {
   .feedback {
-    min-height: 900px;
-    margin-left: 18px;
+    min-height: 850px;
+    min-width: @tablet-width;
   }
 
   .feedback__data {
     display: flex;
+    margin-left: 20px;
   }
 
   .feedback__title {
     font-size: 43px;
+    margin-left: 50px;
     line-height: 50px;
 
     &::after {
@@ -119,7 +123,9 @@
   }
 
   .feedback__map {
-    margin: 28px auto auto auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .feedback__btn {
@@ -132,6 +138,10 @@
 @media (min-width: @desktop-width) {
   .feedback {
     min-height: 630px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: @desktop-width;
   }
 
   .feedback__title {
@@ -154,8 +164,23 @@
     }
   }
 
+  .feedback__info-wrapper {
+    width: 500px;
+    height: 300px;
+  }
+
   .feedback__data {
     flex-direction: column;
     margin-left: 11%;
+  }
+
+  .feedback__map {
+    width: 530px;
+    height: 460px;
+  }
+
+  .feedback__btn {
+    padding: 10px 10px;
+    margin: 0;
   }
 }

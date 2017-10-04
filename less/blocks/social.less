@@ -3,7 +3,9 @@
   display: flex;
   justify-content: space-around;
   align-items: baseline;
-  padding: 0 90px;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 .social__item {
@@ -13,3 +15,19 @@
 .social__link {
   cursor: pointer;
 }
+
+@media (min-width: @tablet-width) {
+  .social {
+    padding-left: 80px;
+    padding-right: 0;
+    width: 150px;
+  }
+
+  .social__item {
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {}
