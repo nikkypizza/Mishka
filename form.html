@@ -10,26 +10,29 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__img" src="img/logo-mobile.svg" width="86" height="36" alt="Магазин &#34;Мишка&#34;">
+    <a href="index.html" class="page-header__logo">
+      <img src="img/logo-mobile.svg" width="86" height="36" alt="Мишка">
     </a>
-    <button class="page-header__button btn-toggle" type="button"></button>
     <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="catalog.html">Каталог товаров</a>
+      <span class="nav__toggler"></span>
+      <ul class="nav__list">
+        <li class="nav__item  nav__item--catalogue">
+          <a href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">Вязание на заказ</a>
+        <li class="nav__item  nav__item--knitting">
+          <a href="form.html">Вязание на заказ</a>
         </li>
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">Поиск по сайту</a>
+        <li class="nav__item  nav__item--new">
+          <a href="#">Новые поступления</a>
         </li>
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">Корзина: пока пуста</a>
+        <li class="nav__item  nav__item--sale">
+          <a href="#">Распродажа</a>
         </li>
       </ul>
     </nav>
+    <a class="page-header__search" href="#">Поиск по сайту</a>
+    <a class="page-header__cart" href="#">Корзина: пока пуста</a>
+    <span class="page-header__delivery">Бесплатная доставка по России</span>
   </header>
 
   <main>
