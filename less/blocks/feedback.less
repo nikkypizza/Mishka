@@ -1,25 +1,25 @@
 .feedback {
-  background-color: #ffffff;
+  background-color: @white;
   min-height: 800px;
   max-width: 320px;
   margin: 0 auto;
 }
 
 .feedback__title {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
-  color: #000000;
+  color: @black;
   margin-left: 30px;
 }
 
 .feedback__email {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: normal;
   font-size: 15px;
   line-height: 30px;
-  color: #444444;
+  color: @dark-grey;
   margin-left: 30px;
 }
 
@@ -28,17 +28,17 @@
 }
 
 .feedback__email-adress {
-  color: #444444;
+  color: @dark-grey;
   text-decoration: none;
   border-bottom: 1px solid #62d1ba;
 }
 
 .feedback__adress {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: normal;
   font-size: 15px;
   line-height: 30px;
-  color: #444444;
+  color: @dark-grey;
   margin-left: 30px;
 }
 
@@ -55,15 +55,15 @@
 }
 
 .feedback__btn {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #444444;
+  color: @dark-grey;
   background-color: transparent;
   text-decoration: none;
-  border: 2px solid #444444;
+  border: 2px solid @dark-grey;
   cursor: pointer;
   margin-top: 38px;
   margin-left: 30px;
@@ -87,11 +87,7 @@
     line-height: 50px;
 
     &::after {
-      content: "";
-      background-image: url("../img/icon-flag.svg");
-      background-repeat: no-repeat;
-      width: 47px;
-      height: 82px;
+      content: url("../img/icon-flag.svg");
       float: right;
       padding-right: 50px;
       margin-top: -15px;
@@ -123,7 +119,7 @@
   }
 
   .feedback__map {
-    width: 100%;
+    width: 100vw;
     margin: 0;
     padding: 0;
   }
@@ -137,7 +133,7 @@
 
 @media (min-width: @desktop-width) {
   .feedback {
-    min-height: 630px;
+    min-height: 560px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -153,11 +149,7 @@
     }
 
     &::before {
-      content: "";
-      background-image: url("../img/icon-flag.svg");
-      background-repeat: no-repeat;
-      width: 47px;
-      height: 82px;
+      content: url("../img/icon-flag.svg");
       float: left;
       margin-right: 60px;
       margin-left: 14px;
@@ -180,7 +172,9 @@
   }
 
   .feedback__btn {
-    padding: 10px 10px;
-    margin: 0;
+    height: 100%;
+    padding: 15px 40px;
+    margin-top: -105px;
+    margin-left: 170px;
   }
 }

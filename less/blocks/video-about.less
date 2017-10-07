@@ -1,6 +1,6 @@
 .video-about {
-  border: 1px solid #ececec;
-  background-color: #ffffff;
+  border: 1px solid @grey;
+  background-color: @white;
   width: 260px;
   display: flex;
   flex-direction: column;
@@ -8,11 +8,11 @@
 }
 
 .video-about__title {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
-  color: #000000;
+  color: @black;
   margin-left: 30px;
   min-height: 50px;
 }
@@ -22,25 +22,24 @@
 }
 
 .video-about__text {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
-  color: #000000;
+  color: @black;
   margin: 30px;
 }
 
 .video-about__link {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #444444;
+  color: @dark-grey;
   background-color: transparent;
   text-decoration: none;
-  border: 2px solid #444444;
-  cursor: pointer;
+  border: 2px solid @dark-grey;
   margin: 0 auto 10px auto;
   padding: 18px 30px;
   width: 140px;

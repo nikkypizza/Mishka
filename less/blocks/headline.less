@@ -10,11 +10,11 @@
 }
 
 .headline__title {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: bold;
   font-size: 27px;
   line-height: 30px;
-  color: #000000;
+  color: @black;
   max-width: 320px;
   margin: 0 auto;
   padding-bottom: 123px;
@@ -22,13 +22,13 @@
 }
 
 .headline__text {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
   width: 150px;
   min-height: 50px;
-  color: #ffffff;
+  color: @white;
 
   &:active {
     color: #97e2d2;
@@ -48,23 +48,24 @@
   align-items: center;
   max-width: 320px;
   margin: 0 auto;
+}
 
-  &--interior {
-    background-color: #63d1bb;
+.headline__link--interior {
+  background-color: #63d1bb;
 
-    &:hover {
-      background-color: #59d5bc;
-    }
-  }
-
-  &--toys {
-    background-color: #56c3b2;
-
-    &:hover {
-      background-color: #46c1ae;
-    }
+  &:hover {
+    background-color: #59d5bc;
   }
 }
+
+.headline__link--toys {
+  background-color: #56c3b2;
+
+  &:hover {
+    background-color: #46c1ae;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .headline {
