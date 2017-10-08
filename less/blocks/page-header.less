@@ -48,8 +48,8 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    width: 260px;
-    padding: 0 30px;
+    width: 670px;
+    padding: 0 50px;
     margin: 0 auto;
     height: 88px;
     display: flex;
@@ -90,21 +90,12 @@
   }
 }
 
-@media (min-width: @tablet-width) and (min-width: @tablet-width) {
-  .page-header {
-    width: 670px;
-    padding: 0 50px;
-  }
-}
-
-@media (min-width: @tablet-width) and (min-width: @desktop-width) {
-  .page-header {
-    width: 1050px;
-    padding: 0 50px;
-  }
-}
-
 @media (min-width: @desktop-width) {
+    .page-header {
+    width: @desktop-width;
+    padding: 0 50px;
+  }
+
   .page-header__logo {
     order: 1;
     width: 152px;

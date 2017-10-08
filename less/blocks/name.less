@@ -5,8 +5,7 @@
 }
 
 .name__list {
-  list-style: none;
-  padding: 0;
+  .clear-li;
 }
 
 .name__item {
@@ -29,6 +28,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .name__item {
+    display: flex;
+  }
+
   .name__label {
     font-size: 19px;
     line-height: 18px;
@@ -37,9 +40,5 @@
 
   .name__input {
     width: 80%;
-  }
-
-  br {
-    display: none;
   }
 }
