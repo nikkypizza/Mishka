@@ -1,11 +1,33 @@
 .phone {
   border: none;
-  background-color: #ffffff;
+  background-color: @white;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .phone__input {
   border: none;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid @black;
   padding: 10px 0;
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .phone {
+    margin: 0 auto;
+    max-width: 630px;
+    min-height: 30px;
+    background-color: @light-grey;
+  }
+
+  .phone__input {
+    background-color: @light-grey;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .phone {
+    max-width: calc(@desktop-width - 60px);
+  }
 }

@@ -1,34 +1,87 @@
 .extra {
   border: none;
-  background-color: #ffffff;
+  background-color: @white;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .extra__input {
-  border: 2px solid #000000;
-  padding: 10px 0;
+  border: 2px solid @black;
   margin-bottom: 10px;
+  padding-bottom: 120px;
+  padding-right: 60px;
+}
+
+
+.extra__send {
+  display: flex;
+  flex-direction: column;
 }
 
 .extra__text {
-  font-family: "Open Sans", "Arial", sans-serif;
+  display: block;
+  font-family: @os-font;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  color: #000000;
+  color: @black;
 }
 
 .extra__submit-btn {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #444444;
+  color: @dark-grey;
   background-color: transparent;
   text-decoration: none;
-  border: 2px solid #444444;
+  border: 2px solid @dark-grey;
   cursor: pointer;
   margin-top: 38px;
-  padding: 18px 46px;
+  padding: 18px 43px;
+}
+
+@media (min-width: @tablet-width) {
+  .extra {
+    max-width: 630px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .extra__input {
+    width: 100%;
+  }
+
+  .extra__send {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .extra__text {
+    align-self: center;
+  }
+
+  .extra__submit-btn {
+    min-width: 300px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra__input {
+    padding-bottom: 120px;
+    padding-right: 300px;
+  }
+
+  .extra__submit-btn {
+    padding: 14px 30px;
+    margin-left: 180px;
+  }
+
+  .extra {
+    max-width: calc(@desktop-width - 60px);
+  }
 }

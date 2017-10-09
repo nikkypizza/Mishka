@@ -1,13 +1,37 @@
 .form {
-  background-color: #ffffff;
+  background-color: @white;
+  padding: 27px 31px;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .form__legend {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: normal;
   font-size: 17px;
   line-height: 16px;
   text-transform: uppercase;
   color: #63d1bb;
-  background-color: #ffffff;
+  background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    max-width: 100%;
+    min-height: 608px;
+    padding: 0;
+  }
+
+  .form__legend {
+    margin-right: 120px;
+    min-width: 60px;
+  }
+
+  .form__legend--grey {
+    background-color: @light-grey;
+  }
+
+  .form__grey-wrapper {
+    background-color: @light-grey;
+  }
 }

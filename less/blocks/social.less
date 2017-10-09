@@ -1,11 +1,27 @@
 .social {
-  background-color: #f1f1f1;
+  background-color: @light-grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  min-width: 120px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 .social__item {
-  list-style: none;
+  .clear-li;
 }
 
-.social__link {
-  cursor: pointer;
+@media (min-width: @tablet-width) {
+  .social {
+    padding-left: 80px;
+    padding-right: 0;
+    width: 150px;
+  }
+
+  .social__item {
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+  }
 }

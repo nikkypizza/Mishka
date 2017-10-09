@@ -1,12 +1,13 @@
 .name {
   border: none;
-  background-color: #ffffff;
+  background-color: @white;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .name__list {
-  list-style: none;
-  padding: 0;
+  .clear-li;
 }
 
 .name__item {
@@ -14,15 +15,43 @@
 }
 
 .name__label {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
-  color: #000000;
+  color: @black;
 }
 
 .name__input {
   border: none;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid @black;
   padding: 10px 0;
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .name {
+    max-width: 630px;
+    margin: 0 auto;
+  }
+
+  .name__item {
+    display: flex;
+  }
+
+  .name__label {
+    font-size: 19px;
+    line-height: 18px;
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .name {
+    max-width: calc(@desktop-width - 60px);
+  }
+
+  .name__item {
+    min-width: 800px;
+  }
 }

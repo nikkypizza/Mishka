@@ -1,9 +1,27 @@
 .form-title {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: @os-font;
   font-weight: bold;
   font-size: 27px;
   line-height: 30px;
   color: #231f20;
-  background-color: #f1f1f1;
-  padding: 81px 38px;
+  background-color: @light-grey;
+  padding: 81px 0;
+  min-height: 50px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .form-title {
+    font-size: 43px;
+    line-height: 50px;
+    min-height: 100px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-title {
+    font-size: 53px;
+    line-height: 57px;
+    min-height: 120px;
+  }
 }

@@ -1,15 +1,114 @@
 .page-header {
-  background-color: #ffffff;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .page-header__logo {
-  padding-left: 40px;
+  display: block;
+  width: 86px;
+  margin: 0 auto;
 }
 
-.page-header__img {
-  background-color: #ffffff;
+.page-header__search {
+  font-family: @os-font;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: @black;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 26px;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px solid @grey;
 }
 
-.page-header__button {
-  cursor: pointer;
+.page-header__cart {
+  font-family: @os-font;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: @black;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 26px;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px solid @grey;
+}
+
+.page-header__delivery {
+  font-family: @os-font;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: @dark-grey;
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 670px;
+    padding: 0 50px;
+    margin: 0 auto;
+    height: 88px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .page-header__logo {
+    order: 0;
+    width: 110px;
+    height: 88px;
+    margin-right: 205px;
+  }
+
+  .page-header__cart {
+    order: 2;
+    min-width: 180px;
+    padding: 30px 0;
+    padding-top: 30px;
+    padding-left: 80px;
+  }
+
+  .page-header__search {
+    order: 1;
+    width: 80px;
+    height: 88px;
+    padding: 0;
+    border-right: 1px solid @grey;
+    border-left: 1px solid @grey;
+    text-indent: -9999px;
+  }
+
+  .page-header__delivery {
+    display: block;
+    order: 4;
+    margin-left: auto;
+    padding: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    min-width: @desktop-width;
+    padding: 0 50px;
+  }
+
+  .page-header__logo {
+    order: 1;
+    width: 152px;
+    height: 76px;
+    margin-left: 175px;
+    margin-right: 60px;
+  }
+
+  .page-header__cart {
+    margin-left: auto;
+  }
+
+  .page-header__delivery {
+    margin-top: -90px;
+  }
 }

@@ -4,59 +4,73 @@
 <head>
   <meta charset="utf-8">
   <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
 </head>
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__img" src="img/logo-mobile.svg" width="86" height="36" alt="Магазин &#34;Мишка&#34;">
+    <a href="index.html" class="page-header__logo">
+      <img src="img/logo-mobile.svg" width="86" height="36" alt="Мишка">
     </a>
-    <button class="page-header__button btn-toggle" type="button"></button>
     <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="catalog.html">Каталог товаров</a>
+      <span class="nav__toggler"></span>
+      <ul class="nav__list">
+        <li class="nav__item  nav__item--catalogue">
+          <a href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="form.html">Вязание на заказ</a>
+        <li class="nav__item  nav__item--knitting">
+          <a href="form.html">Вязание на заказ</a>
         </li>
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">Поиск по сайту</a>
+        <li class="nav__item  nav__item--new">
+          <a href="#">Новые поступления</a>
         </li>
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">Корзина: пока пуста</a>
+        <li class="nav__item  nav__item--sale">
+          <a href="#">Распродажа</a>
         </li>
       </ul>
     </nav>
+    <a class="page-header__search" href="#">Поиск по сайту</a>
+    <a class="page-header__cart" href="#">Корзина: пока пуста</a>
+    <span class="page-header__delivery">Бесплатная доставка по России</span>
   </header>
 
   <main>
     <section class="headline">
       <h1 class="headline__title">Милые штуки ручной работы для дома</h1>
-      <a class="headline__link headline__link--interior" href="#">
-        <p class="headline__text">Предметы интерьера</p>
-        <img class="headline__img" src="img/icon-interior.svg" width="41" height="63" alt="Интерьер">
-      </a>
-      <a class="headline__link headline__link--toys" href="#">
-        <p class="headline__text">Детские игрушки</p>
-        <img class="headline__img" src="img/icon-toy.svg" width="60" height="60" alt="Игрушки">
-      </a>
+      <div class="headline__link-container">
+        <a class="headline__link headline__link--interior" href="#">
+          <p class="headline__text">Предметы интерьера</p>
+          <img class="headline__img" src="img/icon-interior.svg" width="41" height="63" alt="Интерьер">
+        </a>
+        <a class="headline__link headline__link--toys" href="#">
+          <p class="headline__text">Детские игрушки</p>
+          <img class="headline__img" src="img/icon-toy.svg" width="60" height="60" alt="Игрушки">
+        </a>
+      </div>
     </section>
+
     <section class="promo">
-      <h2 class="promo__title">Вязаные корзинки</h2>
-      <h3 class="promo__subtitle">Товар недели</h3>
-      <p class="promo__description">Экологичная чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <ul class="promo__details">
-        <li class="promo__details-text"><span>Цвет: </span>&#171;Тиффани&#187;/серый</li>
-        <li class="promo__details-text"><span>Диаметр:</span> 25 см</li>
-        <li class="promo__details-text"><span>Высота:</span> 15 см</li>
-      </ul>
-      <img class="promo__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаная корзинка цвета &#171;Тиффани&#187;/серый">
-      <p class="promo__price">Цена: <span>990</span> руб.</p>
-      <a href="#" class="promo__order-link">Заказать</a>
+      <div class="promo__item-title">
+        <h2 class="promo__title">Вязаные корзинки</h2>
+        <h3 class="promo__subtitle">Товар недели</h3>
+      </div>
+      <div class="promo__info-wrapper">
+        <p class="promo__description">Экологичная чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <ul class="promo__details">
+          <li class="promo__details-text"><span class="promo__details-measure">Цвет: </span>&#171;Тиффани&#187;/серый</li>
+          <li class="promo__details-text"><span class="promo__details-measure">Диаметр:</span> 25 см</li>
+          <li class="promo__details-text"><span class="promo__details-measure">Высота:</span> 15 см</li>
+        </ul>
+        <img class="promo__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаная корзинка цвета &#171;Тиффани&#187;/серый">
+        <div class="promo__buy">
+          <p class="promo__price">Цена: <span>990</span> руб.</p>
+          <a href="#" class="promo__order-link">Заказать</a>
+        </div>
+      </div>
     </section>
-    <div class="modal visually-hidden">
+
+    <div class="modal display-none">
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__text">Выберите размер:</p>
       <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
@@ -66,6 +80,7 @@
         <button class="modal__submit" type="submit">Добавить</button>
       </form>
     </div>
+
     <section class="advantages">
       <h2 class="advantages__headline">Коротко о нас:</h2>
       <ul class="advantages__list">
@@ -89,42 +104,54 @@
         </li>
       </ul>
     </section>
-    <section class="comments">
-      <h2 class="comments__title">Отзывы</h2>
-      <p class="comments__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-      <h4 class="comments__author">Анастасия Красильникова</h4>
-      <p class="comments__author-id">@misssssiskras</p>
-      <div class="comments__buttons">
-        <button class="comments__button comments__button--previous" type="button">
+
+    <div class="comments-wrapper">
+      <section class="comments">
+        <h2 class="comments__title">Отзывы</h2>
+        <p class="comments__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+        <div class="comments__authorship">
+          <h4 class="comments__author">Анастасия Красильникова</h4>
+          <p class="comments__author-id">@misssssiskras</p>
+        </div>
+        <div class="comments__buttons">
+          <button class="comments__button comments__button--previous" type="button">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="26.003px" viewbox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve"><polygon points="50,11.002 7.659,11.002 15.833,2.828 13.005,0 0,12.998 0.003,13.001 0,13.005 13.005,26.003 15.833,23.175 7.661,15.002 50,15.002 "/>
           </svg>
         </button>
-        <button class="comments__button comments__button--next" type="button">
+          <button class="comments__button comments__button--next" type="button">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="26.003px" viewbox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve"><polygon points="0,11.002 42.341,11.002 34.166,2.828 36.995,0 50,12.998 49.996,13.001 50,13.005 36.995,26.003 34.166,23.175 42.339,15.002 0,15.002 "/>
           </svg>
         </button>
-      </div>
-      <button class="comments__write" type="button">Написать</button>
-    </section>
+        </div>
+        <button class="comments__write" type="button">Написать</button>
+      </section>
+    </div>
+
     <section class="feedback">
-      <h2 class="feedback__title">Контакты</h2>
-      <p class="feedback__email">
-        <span class="feedback__email-title">e-mail:</span>
-        <a class="feedback__email-adress" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-      </p>
-      <p class="feedback__adress">
-        <span class="feedback__adress-title">адрес:</span> г. Санкт-Петербург,<br> ул. Большая <br> Конюшенная,
-        <br> д. 19/8, офис 101
-      </p>
+      <div class="feedback__info-wrapper">
+        <h2 class="feedback__title">Контакты</h2>
+        <div class="feedback__data">
+          <p class="feedback__email">
+            <span class="feedback__email-title">e-mail:</span>
+            <a class="feedback__email-adress" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </p>
+          <p class="feedback__adress">
+            <span class="feedback__adress-title">адрес:</span> г. Санкт-Петербург,<br> ул. Большая Конюшенная,
+            <br> д. 19/8, офис 101
+          </p>
+        </div>
+      </div>
       <div class="feedback__map"></div>
       <button class="feedback__btn" type="button">Напишите нам</button>
     </section>
   </main>
 
-  <footer class="page-footer">
-    <ul class="social">
-      <li class="social__item">
-        <a class="social__link social__link--instagram" title="Instagram" href="#">
+  <div class="page-footer-wrapper">
+    <footer class="page-footer">
+      <div class="page-footer__logo"></div>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--instagram" title="Instagram" href="#">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.769px" height="21.334px" viewbox="53.115 53.19 21.769 21.334" enable-background="new 53.115 53.19 21.769 21.334" xml:space="preserve">
             <g id="instagram">
             <g>
@@ -133,9 +160,9 @@
             </g>
           </svg>
         </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" title="Facebook" href="#">
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" title="Facebook" href="#">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.962px" height="27.718px" viewbox="56.519 49.996 14.962 27.718" enable-background="new 56.519 49.996 14.962 27.718" xml:space="preserve">
             <g id="facebook">
             <g>
@@ -144,9 +171,9 @@
             </g>
           </svg>
         </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--twitter" title="Twitter" href="#">
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" title="Twitter" href="#">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.494px" height="20.168px" viewbox="52.253 53.771 23.494 20.168" enable-background="new 52.253 53.771 23.494 20.168" xml:space="preserve">
             <g id="twitter">
             <g>
@@ -155,18 +182,18 @@
             </g>
           </svg>
         </a>
-      </li>
-    </ul>
-    <p class="copyright">
-      <span class="copyright__title">Разработано</span>
-      <a class="copyright__link" title="HTML Academy" href="https://htmlacademy.ru/intensive/adaptive">
+        </li>
+      </ul>
+      <p class="copyright">
+        <span class="copyright__title">Разработано</span>
+        <a class="copyright__link" title="HTML Academy" href="https://htmlacademy.ru/intensive/adaptive">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewbox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
           <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
         </svg>
       </a>
-    </p>
-  </footer>
-
+      </p>
+    </footer>
+  </div>
 </body>
 
 </html>
