@@ -97,10 +97,6 @@
 }
 
 @media (min-width: @desktop-width) {
-    .headline {
-    min-width: @desktop-width;
-  }
-
   .headline__title {
     font-size: 53px;
     line-height: 57px;
@@ -109,10 +105,10 @@
   }
 
   .headline__link-container {
-    width: 85%;
+    min-width: @desktop-width;
   }
 
   .headline__link {
-    width: 50%;
+    width: 100%;
   }
 }

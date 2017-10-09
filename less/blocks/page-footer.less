@@ -1,6 +1,8 @@
 .page-footer {
   background-color: @light-grey;
   min-height: 160px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: @tablet-width) {
@@ -8,6 +10,7 @@
     padding: 0 6%;
     min-height: 143px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
@@ -22,5 +25,11 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     min-height: 143px;
+    margin: 0 auto;
+    max-width: @desktop-width;
+  }
+
+  .page-footer-wrapper {
+    background-color: @light-grey;
   }
 }
