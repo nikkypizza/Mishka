@@ -2,6 +2,8 @@
   border: none;
   background-color: @white;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .email__input {
@@ -13,11 +15,20 @@
 
 @media (min-width: @tablet-width) {
   .email {
+    margin: 0 auto;
+    max-width: 630px;
     min-height: 30px;
     background-color: @light-grey;
+    flex-direction: row;
   }
 
   .email__input {
     background-color: @light-grey;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .email {
+    max-width: calc(@desktop-width - 60px);
   }
 }

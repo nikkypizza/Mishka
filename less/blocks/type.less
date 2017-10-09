@@ -4,6 +4,7 @@
   padding: 30px;
   min-height: 100px;
   display: flex;
+  flex-direction: column;
 }
 
 .type__radio {
@@ -21,11 +22,20 @@
 
 @media (min-width: @tablet-width) {
   .type {
+    max-width: 630px;
+    margin: 0 auto;
     min-height: 120px;
+    flex-direction: row;
   }
 
   .type__label {
     font-size: 19px;
     line-height: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .type {
+    max-width: calc(@desktop-width - 60px);
   }
 }

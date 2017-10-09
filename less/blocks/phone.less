@@ -2,6 +2,8 @@
   border: none;
   background-color: @white;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .phone__input {
@@ -13,11 +15,19 @@
 
 @media (min-width: @tablet-width) {
   .phone {
+    margin: 0 auto;
+    max-width: 630px;
     min-height: 30px;
     background-color: @light-grey;
   }
 
   .phone__input {
     background-color: @light-grey;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .phone {
+    max-width: calc(@desktop-width - 60px);
   }
 }

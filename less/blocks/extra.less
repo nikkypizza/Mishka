@@ -2,6 +2,8 @@
   border: none;
   background-color: @white;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .extra__input {
@@ -11,7 +13,14 @@
   padding-right: 60px;
 }
 
+
+.extra__send {
+  display: flex;
+  flex-direction: column;
+}
+
 .extra__text {
+  display: block;
   font-family: @os-font;
   font-weight: normal;
   font-size: 14px;
@@ -34,6 +43,33 @@
   padding: 18px 43px;
 }
 
+@media (min-width: @tablet-width) {
+  .extra {
+    max-width: 630px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .extra__input {
+    width: 100%;
+  }
+
+  .extra__send {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .extra__text {
+    align-self: center;
+
+  }
+  .extra__submit-btn {
+    min-width: 300px;
+    margin-top: 0;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .extra__input {
     padding-bottom: 120px;
@@ -42,5 +78,10 @@
 
   .extra__submit-btn {
     padding: 14px 30px;
+    margin-left: 180px;
+  }
+
+  .extra {
+    max-width: calc(@desktop-width - 60px);
   }
 }

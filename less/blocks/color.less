@@ -2,10 +2,14 @@
   background-color: @white;
   padding: 30px;
   border: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .color__list {
   .clear-li;
+  display: flex;
+  flex-direction: column;
 }
 
 .color__item {
@@ -23,12 +27,32 @@
 
 @media (min-width: @tablet-width) {
   .color {
-    min-height: 300px;
+    margin: 0 auto;
+    max-width: 630px;
+    min-height: 200px;
     background-color: @light-grey;
+  }
+
+  .color__list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    flex-wrap: wrap;
+    min-height: 50px;
   }
 
   .color__label {
     font-size: 19px;
     line-height: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .color {
+    max-width: calc(@desktop-width - 60px);
+  }
+
+  .color__list {
+    width: 400px;
   }
 }
