@@ -4,7 +4,7 @@
   width: 260px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
 }
 
 .video-about__title {
@@ -19,6 +19,11 @@
 
 .video-about__img {
   background-color: #e5e5e5;
+}
+
+.video-about__info {
+  display: flex;
+  flex-direction: column;
 }
 
 .video-about__text {
@@ -52,23 +57,31 @@
   }
 
   .video-about__img {
-    order: 1;
     align-self: center;
   }
 
   .video-about__title {
-    order: 2;
     padding-left: 60px;
   }
 
   .video-about__text {
     padding: 0 60px;
-    order: 3;
   }
 
   .video-about__link {
     text-align: center;
-    width: 440px;
-    order: 4;
+    width: 540px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video-about {
+    max-width: @desktop-width;
+    flex-direction: row;
+    min-height: 400px;
+  }
+
+  .video-about__link {
+    width: 200px;
   }
 }
