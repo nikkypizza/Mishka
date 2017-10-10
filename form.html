@@ -13,8 +13,8 @@
     <a href="index.html" class="page-header__logo">
       <img src="img/logo-mobile.svg" width="86" height="36" alt="Мишка">
     </a>
+      <span class="page-header__toggler"></span>
     <nav class="nav">
-      <span class="nav__toggler"></span>
       <ul class="nav__list">
         <li class="nav__item  nav__item--catalogue">
           <a href="catalog.html">Каталог товаров</a>
@@ -30,7 +30,7 @@
         </li>
       </ul>
     </nav>
-    <a class="page-header__search" href="#">Поиск по сайту</a>
+    <a class="page-header__search" href="#"><span>Поиск по сайту</span></a>
     <a class="page-header__cart" href="#">Корзина: пока пуста</a>
     <span class="page-header__delivery">Бесплатная доставка по России</span>
   </header>
@@ -42,7 +42,7 @@
     <form class="form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="type">
         <div class="fieldset-info">
-          <legend class="form__legend">ТИП</legend>
+          <div class="form__title">ТИП</div>
           <div class="type__info">
             <input class="type__radio" type="radio" name="product-type" value="interior-accessory" id="interior-accessory" checked>
             <label class="type__label" for="interior-accessory">Аксессуар для интерьера</label><br>
@@ -54,7 +54,7 @@
       <div class="form__grey-wrapper">
         <fieldset class="color">
           <div class="fieldset-info">
-            <legend class="form__legend form__legend--grey">Цвет</legend>
+            <div class="form__title form__title--grey">Цвет</div>
             <ul class="color__list">
               <li class="color__item">
                 <input class="color__input" type="checkbox" name="color-white" id="white" checked>
@@ -86,7 +86,7 @@
       </div>
       <fieldset class="name">
         <div class="fieldset-info">
-          <legend class="form__legend">ФИО</legend>
+          <div class="form__title">ФИО</div>
           <ul class="name__list">
             <li class="name__item">
               <label class="name__label" for="first-name">Имя:</label><br>
@@ -107,7 +107,7 @@
       <div class="form__grey-wrapper">
         <fieldset class="phone">
           <div class="fieldset-info">
-            <legend class="form__legend form__legend--grey">ТЕЛ</legend>
+            <div class="form__title form__title--grey">ТЕЛ</div>
             <input class="phone__input" type="number" name="phone-number" placeholder="+7 XXX XX XX*" required>
           </div>
         </fieldset>
@@ -116,7 +116,7 @@
       <div class="form__grey-wrapper">
         <fieldset class="email">
           <div class="fieldset-info">
-            <legend class="form__legend form__legend--grey">E-MAIL</legend>
+            <div class="form__title form__title--grey">E-MAIL</div>
             <input class="email__input" type="email" name="e-mail" placeholder="Ваш Email*" required>
           </div>
         </fieldset>
@@ -124,7 +124,7 @@
 
       <fieldset class="extra">
         <div class="fieldset-info">
-          <legend class="form__legend">ДОП</legend>
+          <div class="form__title">ДОП</div>
           <input class="extra__input" type="text" name="additional-info" placeholder="Опишите все ваши пожелания к заказу">
         </div>
         <div class="extra__send">
