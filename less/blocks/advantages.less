@@ -1,7 +1,7 @@
 .advantages {
   background-color: @white;
-  padding: 30px 30px 0 30px;
-  min-height: 700px;
+  padding: 27px 30px 0 28px;
+  min-height: 810px;
   max-width: 320px;
   margin: 0 auto;
   display: flex;
@@ -13,8 +13,8 @@
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
-  margin: 0;
   color: @black;
+  margin: 0;
 }
 
 .advantages__list {
@@ -23,41 +23,59 @@
 
 .advantages__list-item {
   padding-top: 14px;
-  min-height: 93px;
+  min-height: 92px;
+  max-width: 300px;
 }
 
 .advantages__list-item--icon-eco {
   &::before {
+    display: block;
+    margin-left: 9px;
     content: url("../img/icon-feature-flower.svg");
   }
 }
 
 .advantages__list-item--icon-price {
   &::before {
+    display: block;
     content: url("../img/icon-feature-money.svg");
+    margin-left: 2px;
   }
 }
 
 .advantages__list-item--icon-likes {
   &::before {
+    display: block;
+    margin-left: 9px;
     content: url("../img/icon-feature-heart.svg");
   }
 }
 
 .advantages__list-item--icon-handmade {
+  padding-top: 10px;
+
   &::before {
+    display: block;
+    margin-left: 4px;
     content: url("../img/icon-feature-ball.svg");
   }
 }
 
 .advantages__list-item--icon-native {
+  padding-top: 15px;
+
   &::before {
+    display: block;
     content: url("../img/icon-feature-rocket.svg");
+    padding-bottom: 8px;
   }
 }
 
 .advantages__list-item--icon-package {
+  padding: 13px 0 0 3px;
+
   &::before {
+    display: block;
     content: url("../img/icon-feature-gift.svg");
   }
 }
@@ -72,19 +90,28 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
-    min-height: 500px;
+    min-height: 612px;
     margin: 0 auto;
     max-width: 668px;
+    padding-left: 20px;
+  }
+
+  .advantages__headline {
+    font-size: 43px;
+    line-height: 50px;
+    margin-top: 23px;
   }
 
   .advantages__list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 400px;
+    justify-content: space-around;
+    height: 480px;
   }
 
   .advantages__list-item {
+    padding-left: 5px;
     width: 50%;
   }
 
@@ -93,22 +120,56 @@
     line-height: 22px;
   }
 
-  .advantages__headline {
-    font-size: 43px;
-    line-height: 50px;
-  }
-}
+  .advantages__list-item--icon-eco {
+    padding-top: 20px;
 
-@media (min-width: @desktop-width) {
-  .advantages {
-    min-height: 600px;
-    min-width: 700px;
-    padding: 74px 15% 0 15%;
+    &::before {
+      margin: 0 0 -10px 7px;
+    }
   }
 
-  .advantages__headline {
-    font-size: 53px;
-    line-height: 57px;
-    margin-bottom: 20px;
+  .advantages__list-item--icon-likes {
+    padding-bottom: 7px;
+
+    &::before {
+      margin-left: 8px;
+    }
+  }
+
+  .advantages__list-item--icon-handmade {
+    &::before {
+      margin: 15px 0 -5px 3px;
+    }
+  }
+
+  .advantages__list-item--icon-native {
+    &::before {
+      margin-left: -6px;
+    }
+  }
+
+  .advantages__list-item--icon-package {
+    padding-bottom: 8px;
+
+    &::before {
+      margin-left: 3px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .advantages {
+      min-height: 600px;
+      min-width: 700px;
+      padding: 35px 175px 0 175px;
+    }
+
+    .advantages__headline {
+      font-size: 53px;
+      line-height: 57px;
+    }
+
+    .advantages__list-item {
+      padding-left: 0;
+    }
   }
 }
