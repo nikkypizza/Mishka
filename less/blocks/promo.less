@@ -1,7 +1,7 @@
 .promo {
   background-color: @white;
   padding: 27px 31px;
-  min-height: 700px;
+  min-height: 772px;
   max-width: 320px;
   margin: 0 auto;
   display: flex;
@@ -38,13 +38,14 @@
 }
 
 .promo__details {
-  padding: 0;
+  padding: 5px 0 7px 0;
   width: 260px;
   min-height: 107px;
 }
 
 .promo__details-text {
   .clear-li;
+  padding: 3px 0;
   font-family: @os-font;
   font-weight: normal;
   font-size: 15px;
@@ -70,7 +71,7 @@
   font-size: 17px;
   line-height: 24px;
   color: @dark-grey;
-  margin-top: 25px;
+  margin-top: 21px;
   padding: 0 0 25px 70px;
 }
 
@@ -99,17 +100,19 @@
 @media (min-width: @tablet-width) {
   .promo {
     max-width: 670px;
-    min-height: 608px;
-    padding: 0 50px;
+    min-height: 625px;
+    padding: 0;
     flex-wrap: wrap;
     flex-direction: row;
-    height: 800px;
   }
 
   .promo__item-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 0;
+    margin-top: 34px;
+    max-height: 50px;
   }
 
   .promo__title {
@@ -121,24 +124,25 @@
 
   .promo__subtitle {
     line-height: 17px;
-    width: 135px;
+    width: 105px;
     text-align: center;
-    margin-left: auto;
+    margin-left: 53px;
   }
 
   .promo__info-wrapper {
-    width: 670px;
+    width: @tablet-width;
     height: 500px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin-top: 0;
   }
 
   .promo__description {
     font-size: 17px;
     line-height: 30px;
     width: 290px;
-    margin-right: auto;
+    margin-top: 25px;
     order: 1;
   }
 
@@ -149,25 +153,27 @@
 
   .promo__price {
     font-size: 20px;
-    width: 290px;
+    min-width: 290px;
+    margin-top: 28px;
+    margin-bottom: 10px;
   }
 
   .promo__image {
-    width: 330px;
+    min-width: 330px;
     height: auto;
-    margin-top: 20px;
+    margin: 35px 3px 0 auto;
     background-color: #8bbfba;
     order: 4;
   }
 
   .promo__order-link {
     text-align: center;
-    padding: 20px 100px;
+    padding: 13px 30px;
   }
 
   .promo__buy {
     display: flex;
-    width: 300px;
+    max-width: 290px;
     flex-direction: column;
     order: 3;
   }
@@ -176,19 +182,21 @@
 @media (min-width: @desktop-width) {
   .promo {
     min-width: @desktop-width;
-    min-height: 780px;
+    min-height: 727px;
     padding-bottom: 80px;
   }
 
   .promo__item-title {
     flex-direction: row-reverse;
     justify-content: flex-end;
-    margin-top: 80px;
-    min-width: @desktop-width;
+    margin-top: 117px;
+    margin-left: 17px;
+    min-width: 600px;
   }
 
   .promo__title {
     font-size: 53px;
+    margin-left: 18px;
     line-height: 57px;
     width: 100%;
     z-index: 1;
@@ -203,9 +211,23 @@
   .promo__info-wrapper {
     justify-content: space-between;
     margin-left: 170px;
+    padding: 0 0 0 5px;
+  }
+
+  .promo__description {
+    margin-top: 20px;
+  }
+
+  .promo__details {
+    margin: 0 0 45px 0;
   }
 
   .promo__image {
-    margin-top: -150px;
+    margin-top: -138px;
+    margin-left: -33px;
+  }
+
+  .promo__buy {
+    margin-bottom: 5px;
   }
 }
