@@ -51,9 +51,19 @@
 }
 
 .comments__button {
-  background-color: transparent;
+  background-color: @white;
+  border: 1px solid @grey;
   width: 100%;
   border: 1px solid #ececec;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .comments__write {
@@ -70,6 +80,16 @@
   margin-top: 32px;
   padding: 14px 82px;
   width: 100%;
+
+  &:hover {
+    background-color: @dark-grey;
+    color: @white;
+  }
+
+  &:active {
+    background-color: @dark-grey;
+    color: #8d8d8d;
+  }
 }
 
 @media (min-width: @tablet-width) {

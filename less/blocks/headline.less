@@ -29,6 +29,7 @@
   width: 150px;
   min-height: 50px;
   color: @white;
+  margin: 0;
 
   &:active {
     color: #97e2d2;
@@ -37,7 +38,15 @@
 
 .headline__img {
   background-color: transparent;
-  opacity: 0.3;
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .headline__link {
@@ -99,6 +108,18 @@
 
   .headline__link {
     width: 334px;
+  }
+
+  .headline__link--interior {
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .headline__link--toys {
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 }
 
