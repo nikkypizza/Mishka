@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  outline: 1px solid red;
 }
 
 .catalog-list__item {
@@ -15,18 +14,20 @@
 
 @media (min-width: @tablet-width) {
   .catalog-list__item {
-    width: 91%;
+    min-width: 668px;
+    margin: 50px auto 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-list {
     flex-direction: row;
-    max-width: @desktop-width+70px;
-    margin: 0 auto;
+    max-width: @desktop-width;
+    margin: 110px auto 0 auto;
   }
 
   .catalog-list__item {
-    width: 27%;
+    min-width: 315px;
+    margin: 20px 0;
   }
 }
