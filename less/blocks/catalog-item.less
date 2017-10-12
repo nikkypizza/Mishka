@@ -16,7 +16,9 @@
   font-size: 17px;
   line-height: 24px;
   color: @black;
-  margin-left: 28px;
+  max-width: 203px;
+  margin: 25px auto 0 auto;
+  padding: 0;
 }
 
 .catalog-item__details {
@@ -25,17 +27,21 @@
   font-size: 13px;
   line-height: 30px;
   color: @dark-grey;
-  margin-left: 28px;
+  border-bottom: 1px solid @grey;
+  max-width: 203px;
+  margin: 1px 0 20px 28px;
+  padding: 2px 0 18px 0;
 }
 
 .catalog-item__price {
   font-family: @os-font;
   font-weight: bold;
+  display: block;
   font-size: 15px;
   line-height: 24px;
   color: @black;
-  border-top: 1px solid @grey;
-  padding-left: 28px;
+  margin: 25px auto;
+  max-width: 203px;
 }
 
 @media (min-width: @tablet-width) {
