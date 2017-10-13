@@ -23,7 +23,8 @@
   background-image: url("../img/icon-menu-close.svg");
   width: 21px;
   height: 21px;
-  display: block;
+  border: none;
+  background-color: transparent;
   float: right;
   cursor: pointer;
   margin-top: -32px;
@@ -54,7 +55,7 @@
 
   &::before {
     content: url("../../img/icon-search.svg");
-    height: 18px;
+    height: 17px;
     width: 18px;
     opacity: 0.3;
     margin-left: auto;
@@ -129,11 +130,10 @@
   .page-header__cart {
     order: 2;
     max-width: 250px;
-    padding: 0 0 0 32px;
-    padding-top: 31px;
+    padding: 31px 2px 31px 32px;
 
     &::before {
-      margin-right: 33px;
+      margin-right: 32px;
     }
   }
 
