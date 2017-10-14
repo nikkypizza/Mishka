@@ -1,7 +1,7 @@
 .form {
   background-color: @white;
   max-width: 320px;
-  padding: 27px 31px;
+  padding: 6px 25px;
   margin: 0 auto;
 }
 
@@ -34,8 +34,16 @@
   }
 
   .form__title {
-    margin-right: 120px;
-    min-width: 60px;
+    min-width: 167px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__title--type {
+    padding-top: 35px;
+    align-self: flex-start;
   }
 
   .form__title--grey {
@@ -46,3 +54,10 @@
     background-color: @light-grey;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .form__title {
+    padding-left: 35px;
+    min-width: 110px;
+    }
+  }
