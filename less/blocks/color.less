@@ -23,6 +23,30 @@
   line-height: 18px;
   color: @black;
   padding-left: 20px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    border: 2px solid @dark-grey;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.color__input {
+  opacity: 0;
+}
+
+.color__input:checked + label {
+  &::before {
+    background: url("../img/icon-tick.svg") no-repeat;
+    background-position: center;
+    background-size: 70%;
+    display: inline-block;
+    border: 2px solid @dark-grey;
+    width: 35px;
+    height: 35px;
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -3,21 +3,64 @@
   background-color: @white;
   padding: 30px;
   min-height: 100px;
+}
+
+.type__info {
   display: flex;
   flex-direction: column;
 }
 
 .type__radio {
   margin-bottom: 25px;
+  opacity: 0;
 }
 
 .type__label {
   font-family: @os-font;
   font-weight: bold;
+  display: inline-block;
   font-size: 17px;
+  position: relative;
   line-height: 18px;
   color: @black;
-  padding-left: 20px;
+  padding-left: 50px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    border: 2px solid @dark-grey;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.type__radio:checked + label {
+
+  &::before {
+    content: "";
+    display: inline-block;
+    border: 2px solid @dark-grey;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    background-color: #62d1ba;
+  }
+  // Тут я в сомнениях, как сделать :checked без абсолютного позиционирования. Даже думал может вырезать кружок в фш и вставить его через бэкграунд, и отцентрировать, тогда он будет точно посередине контейнера (с абсолютом кружок :checked выглядит криво относительно центра, как его не двигал).
+  //
+  // Стоит ли задавать радио-кнопкам табиндекс и состояние :focus? При табировании выделяется только :checked и не видно что именно выделено табом.
+  //
+  //  &::after {
+  //    content: "";
+  //    display: block;
+  //    border-radius: 50%;
+  //    width: 15px;
+  //    height: 15px;
+  //    right: 180px;
+  //    top: 11px;
+  //    position: absolute;
+  //    background-color: #62d1ba;
+  //  }
 }
 
 @media (min-width: @tablet-width) {
