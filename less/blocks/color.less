@@ -34,13 +34,14 @@
     height: 35px;
     margin-right: 23px;
   }
-    &:hover::before {
-      border:2px solid @input-hover-color;
-    }
 
-    &:active::before {
-      border:2px solid #c7c7c7;
-    }
+  &:hover:before {
+    border: 2px solid @input-hover-color;
+  }
+
+  &:active:before {
+    border: 2px solid #c7c7c7;
+  }
 }
 
 .color__input {
@@ -59,13 +60,13 @@
     height: 35px;
   }
 
-    &:hover::before {
-      border:2px solid @input-hover-color;
-    }
+  &:hover:before {
+    border: 2px solid @input-hover-color;
+  }
 
-    &:active::before {
-      border:2px solid #c7c7c7;
-    }
+  &:active:before {
+    border: 2px solid #c7c7c7;
+  }
 }
 
 @media (min-width: @tablet-width) {
