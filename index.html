@@ -13,7 +13,7 @@
     <a href="index.html" class="page-header__logo">
       <img src="img/logo-mobile.svg" width="86" height="36" alt="Мишка">
     </a>
-      <button type="button" class="page-header__toggler"></button>
+    <button type="button" class="page-header__toggler"></button>
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item  nav__item--catalogue">
@@ -70,15 +70,18 @@
       </div>
     </section>
 
-    <div class="modal display-none">
+    <div class="display-none modal">
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__text">Выберите размер:</p>
       <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
-        <input class="modal__radio" type="radio" name="product-size" value="S" checked>S<br>
-        <input class="modal__radio" type="radio" name="product-size" value="M">M<br>
-        <input class="modal__radio" type="radio" name="product-size" value="L">L<br>
-        <button class="modal__submit" type="submit">Добавить</button>
+        <input class="modal__radio" type="radio" name="product-size" value="S" id="size-s" checked>
+        <label for="size-s">S</label>
+        <input class="modal__radio" type="radio" name="product-size" value="M" id="size-m">
+        <label for="size-m">M</label>
+        <input class="modal__radio" type="radio" name="product-size" value="L" id="size-l">
+        <label for="size-l">L</label>
       </form>
+      <button class="modal__submit" type="submit">Добавить</button>
     </div>
 
     <section class="advantages">

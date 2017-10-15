@@ -1,33 +1,59 @@
 .phone {
   border: none;
   background-color: @white;
-  padding: 30px;
   display: flex;
   flex-direction: column;
+  margin: 9px auto 0 auto;
+  padding: 0;
+  max-width: 260px;
 }
 
 .phone__input {
   border: none;
   border-bottom: 2px solid @black;
-  padding: 10px 0;
+  padding: 21px 0 16px 0;
   width: 100%;
+  background: url("../img/icon-phone.svg") no-repeat right;
+  //  с иконкой неясно пока
+
+  &:hover {
+    border-bottom: 2px solid @input-hover-color;
+  }
+
+  &:focus {
+    border-bottom: 2px solid @input-hover-color;
+  }
+
+  &::-webkit-input-placeholder {
+    .placeholder-mobile;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .phone {
-    margin: 0 auto;
-    max-width: 630px;
+    padding-top: 46px;
+    max-width: 670px;
     min-height: 30px;
     background-color: @light-grey;
   }
 
   .phone__input {
     background-color: @light-grey;
+    padding: 21px 0 15px 0;
+
+    &::-webkit-input-placeholder {
+      padding-left: 15px;
+      .placeholder-tablet;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .phone {
     max-width: calc(@desktop-width - 60px);
+  }
+
+  .phone__input {
+    max-width: 71%;
   }
 }
