@@ -56,22 +56,19 @@
     border-radius: 50%;
     width: 34px;
     height: 34px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    left: 12px;
+    top: 13px;
+    position: absolute;
     background-color: #62d1ba;
-  } // Тут я в сомнениях, как сделать :checked без абсолютного позиционирования. Даже думал может вырезать кружок в фш и вставить его через бэкграунд, и отцентрировать, тогда он будет точно посередине контейнера (с абсолютом кружок :checked выглядит криво относительно центра, как его не двигал).
-  //
-  // Стоит ли задавать радио-кнопкам табиндекс и состояние :focus? При табировании выделяется только :checked и не видно что именно выделено табом.
-  //
-  //  &::after {
-  //    content: "";
-  //    display: block;
-  //    border-radius: 50%;
-  //    width: 15px;
-  //    height: 15px;
-  //    right: 180px;
-  //    top: 11px;
-  //    position: absolute;
-  //    background-color: #62d1ba;
-  //  }
+  }
 
   &:hover::before {
     border: 2px solid @input-hover-color;
@@ -92,6 +89,27 @@
 
   .type__info {
     padding-top: 11px;
+  }
+
+  .type__radio:checked + label {
+    &::after {
+      content: "";
+      display: block;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      left: 16px;
+      top: 21px;
+      position: absolute;
+      background-color: #62d1ba;
+    }
+  }
+
+  .type__radio:focus + label {
+
+    &::before {
+      border: 2px solid @input-hover-color;
+    }
   }
 
   .type__label {

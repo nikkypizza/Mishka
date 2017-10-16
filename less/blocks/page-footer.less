@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 
+.page-footer__logo {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer {
     padding: 0 3%;
@@ -16,11 +20,19 @@
   }
 
   .page-footer__logo {
-    background-image: url("../img/logo-mobile.svg");
+    display: block;
     width: 86px;
     height: 36px;
     margin-left: 35px;
     margin-right: 84px;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 

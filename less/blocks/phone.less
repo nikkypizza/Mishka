@@ -9,23 +9,20 @@
 }
 
 .phone__input {
+  .placeholder-mobile;
   border: none;
   border-bottom: 2px solid @black;
   padding: 21px 0 16px 0;
   width: 100%;
   background: url("../img/icon-phone.svg") no-repeat right;
-  //  с иконкой неясно пока
 
   &:hover {
     border-bottom: 2px solid @input-hover-color;
   }
 
   &:focus {
+    outline-color: transparent;
     border-bottom: 2px solid @input-hover-color;
-  }
-
-  &::-webkit-input-placeholder {
-    .placeholder-mobile;
   }
 }
 
@@ -38,13 +35,9 @@
   }
 
   .phone__input {
+    .placeholder-tablet;
     background-color: @light-grey;
-    padding: 21px 0 15px 0;
-
-    &::-webkit-input-placeholder {
-      padding-left: 15px;
-      .placeholder-tablet;
-    }
+    padding: 15px 0 15px 15px;
   }
 }
 

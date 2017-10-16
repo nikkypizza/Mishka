@@ -30,23 +30,10 @@
   min-height: 50px;
   color: @white;
   margin: 0;
-
-  &:active {
-    color: #97e2d2;
-  }
 }
 
-.headline__img {
-  background-color: transparent;
-  opacity: 0.2;
-
-  &:hover {
-    opacity: 0.4;
-  }
-
-  &:active {
-    opacity: 0.1;
-  }
+.headline__link:active .headline__text {
+  color: #97e2d2;
 }
 
 .headline__link {
@@ -58,6 +45,19 @@
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.headline__img {
+  background-color: transparent;
+  opacity: 0.2;
+}
+
+.headline__link:hover .headline__img {
+  opacity: 0.4;
+}
+
+.headline__link:active .headline__img {
+  opacity: 0.1;
 }
 
 .headline__link--interior {

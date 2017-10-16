@@ -9,28 +9,27 @@
 }
 
 .email__input {
+  .placeholder-mobile;
   border: none;
   border-bottom: 2px solid @black;
   padding: 24px 0 15px 0;
   width: 100%;
-  background: url("../img/icon-mail.svg") no-repeat right; //  с иконкой неясно пока
+  background: url("../img/icon-mail.svg") no-repeat right;
+
   &:hover {
     border-bottom: 2px solid @input-hover-color;
   }
 
   &:focus {
+    outline-color: transparent;
     border-bottom: 2px solid @input-hover-color;
-  }
-
-  &::-webkit-input-placeholder {
-    .placeholder-mobile;
   }
 }
 
 @media (min-width: @tablet-width) {
   .email {
     margin: 0 auto;
-    padding: 17px 0 50px 0;
+    padding: 9px 0 50px 0;
     max-width: 670px;
     min-height: 30px;
     background-color: @light-grey;
@@ -38,12 +37,9 @@
   }
 
   .email__input {
+    .placeholder-tablet;
+    padding-left: 15px;
     background-color: @light-grey;
-
-    &::-webkit-input-placeholder {
-      padding-left: 15px;
-      .placeholder-tablet;
-    }
   }
 }
 
