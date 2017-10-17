@@ -1,6 +1,8 @@
 .color {
   background-color: @white;
-  padding: 30px;
+  padding: 0;
+  margin: 30px auto 0 auto;
+  max-width: 260px;
   border: none;
   display: flex;
   flex-direction: column;
@@ -10,49 +12,135 @@
   .clear-li;
   display: flex;
   flex-direction: column;
-}
-
-.color__item {
-  padding-bottom: 30px;
+  margin: 6px 0 0 0;
 }
 
 .color__label {
   font-family: @os-font;
   font-weight: bold;
+  display: flex;
+  align-items: center;
   font-size: 17px;
   line-height: 18px;
+  margin-top: 18px;
+  margin-bottom: 4px;
   color: @black;
-  padding-left: 20px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    border: 2px solid @dark-grey;
+    width: 35px;
+    height: 35px;
+    margin-right: 23px;
+  }
+
+  &:hover::before {
+    border: 2px solid @input-hover-color;
+  }
+
+  &:active::before {
+    border: 2px solid #c7c7c7;
+  }
+}
+
+.color__input {
+  position: absolute;
+  opacity: 0;
+}
+
+.color__input:checked + label {
+  &::before {
+    background: url("../img/icon-tick.svg") no-repeat;
+    background-position: center;
+    background-size: 70%;
+    display: inline-block;
+    border: 2px solid @dark-grey;
+    width: 35px;
+    height: 35px;
+  }
+
+  &:hover::before {
+    border: 2px solid @input-hover-color;
+  }
+
+  &:active::before {
+    border: 2px solid #c7c7c7;
+  }
+}
+
+.color__input:focus + label {
+  &::before {
+    border: 2px solid @input-hover-color;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .color {
-    margin: 0 auto;
-    max-width: 630px;
+    margin: 52px auto 0 auto;
+    max-width: 670px;
     min-height: 200px;
     background-color: @light-grey;
   }
 
   .color__list {
     flex-direction: row;
-    justify-content: space-between;
-    width: 300px;
+    justify-content: flex-start;
+    max-width: 500px;
+    margin-top: 48px;
+    margin-bottom: 27px;
     flex-wrap: wrap;
-    min-height: 50px;
+    min-height: 230px;
+  }
+
+  .color__item {
+    min-width: 200px;
+  }
+
+  .color__item:nth-child(odd) {
+    margin-right: 62px;
   }
 
   .color__label {
     font-size: 19px;
-    line-height: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &::before {
+      width: 50px;
+      height: 50px;
+      margin-right: 27px;
+    }
+  }
+
+  .color__input:checked + label {
+    &::before {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .color {
     max-width: calc(@desktop-width - 60px);
+    min-height: 227px;
   }
 
   .color__list {
-    width: 400px;
+    margin: 0;
+    margin-top: -17px;
+    justify-content: space-between;
+    align-content: center;
+    max-width: 727px;
+  }
+
+  .color__item {
+    max-height: 50px;
+    margin-top: 26px;
+  }
+
+  .color__item:nth-child(odd) {
+    margin-right: 0;
   }
 }

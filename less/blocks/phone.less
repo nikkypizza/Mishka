@@ -1,33 +1,52 @@
 .phone {
   border: none;
   background-color: @white;
-  padding: 30px;
   display: flex;
   flex-direction: column;
+  margin: 9px auto 0 auto;
+  padding: 0;
+  max-width: 260px;
 }
 
 .phone__input {
+  .placeholder-mobile;
   border: none;
   border-bottom: 2px solid @black;
-  padding: 10px 0;
+  padding: 21px 0 16px 0;
   width: 100%;
+  background: url("../img/icon-phone.svg") no-repeat right;
+
+  &:hover {
+    border-bottom: 2px solid @input-hover-color;
+  }
+
+  &:focus {
+    outline-color: transparent;
+    border-bottom: 2px solid @input-hover-color;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .phone {
-    margin: 0 auto;
-    max-width: 630px;
+    padding-top: 46px;
+    max-width: 670px;
     min-height: 30px;
     background-color: @light-grey;
   }
 
   .phone__input {
+    .placeholder-tablet;
     background-color: @light-grey;
+    padding: 15px 0 15px 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .phone {
     max-width: calc(@desktop-width - 60px);
+  }
+
+  .phone__input {
+    max-width: 71%;
   }
 }

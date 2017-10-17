@@ -1,6 +1,19 @@
 .modal {
-  padding: 30px;
+  position: fixed;
+  background-color: transparent;
+  width: 100vw;
+  top: 35vh;
+  z-index: 2;
+}
+
+.modal__wrapper {
+  max-width: 260px;
+  min-height: 334px;
+  margin: 0 auto;
+  display: flex;
   background-color: @white;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal__title {
@@ -8,6 +21,10 @@
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
+  padding: 28px 0 0 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 150px;
   text-transform: uppercase;
   color: @black;
 }
@@ -18,6 +35,7 @@
   font-size: 15px;
   line-height: 30px;
   color: @dark-grey;
+  margin-top: 11px;
 }
 
 .modal__size-chart {
@@ -27,10 +45,31 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @dark-grey;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 8px;
+  position: relative;
 }
 
 .modal__radio {
+  position: absolute;
+  top: -25px;
+  opacity: 0;
+}
+
+.modal__radio + label {
   cursor: pointer;
+  border: 2px solid @grey;
+  padding: 18px 33px;
+
+  &:hover {
+    border: 2px solid #c7c7c7;
+  }
+}
+
+.modal__radio:checked + label {
+  border: 2px solid #63d1bb;
 }
 
 .modal__submit {
@@ -45,4 +84,43 @@
   cursor: pointer;
   background-color: #63d1bb;
   color: @white;
+
+  &:hover {
+    background-color: #59d5bc;
+  }
+
+  &:active {
+    color: #97e2d2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal__wrapper {
+    min-width: 565px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 57px;
+    width: auto;
+    padding: 31px 0 0 0;
+  }
+
+  .modal__text {
+    font-size: 17px;
+    margin-top: 14px;
+  }
+
+  .modal__size-chart {
+    width: 61%;
+  }
+
+  .modal__radio + label {
+    padding: 15px 47px;
+  }
+
+  .modal__submit {
+    margin-top: 30px;
+    padding: 18px 128px;
+  }
 }

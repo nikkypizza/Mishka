@@ -1,18 +1,28 @@
 .extra {
   border: none;
   background-color: @white;
-  padding: 30px;
+  margin: 33px auto 47px auto;
+  padding: 0;
+  max-width: 260px;
   display: flex;
   flex-direction: column;
 }
 
 .extra__input {
+  .placeholder-mobile;
   border: 2px solid @black;
-  margin-bottom: 10px;
-  padding-bottom: 120px;
-  padding-right: 60px;
-}
+  margin: 24px 0 0 0;
+  padding: 12px 48px 89px 12px;
 
+  &:hover {
+    border: 2px solid @input-hover-color;
+  }
+
+  &:focus {
+    outline-color: transparent;
+    border: 2px solid @input-hover-color;
+  }
+}
 
 .extra__send {
   display: flex;
@@ -24,6 +34,7 @@
   font-family: @os-font;
   font-weight: normal;
   font-size: 14px;
+  margin-top: 16px;
   line-height: 16px;
   color: @black;
 }
@@ -39,49 +50,69 @@
   text-decoration: none;
   border: 2px solid @dark-grey;
   cursor: pointer;
-  margin-top: 38px;
-  padding: 18px 43px;
+  margin-top: 30px;
+  padding: 15px 0;
+
+  &:hover {
+    background-color: @dark-grey;
+    color: @white;
+  }
+
+  &:active {
+    background-color: @dark-grey;
+    color: #8d8d8d;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .extra {
-    max-width: 630px;
-    margin: 0 auto;
+    max-width: 670px;
+    margin: 26px auto 49px auto;
     display: flex;
   }
 
   .extra__input {
+    .placeholder-tablet;
     width: 100%;
   }
 
   .extra__send {
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 41px;
   }
 
   .extra__text {
+    font-family: @os-font;
     align-self: center;
+    font-size: 17px;
+    line-height: 30px;
+    padding-bottom: 7px;
   }
 
   .extra__submit-btn {
-    min-width: 300px;
-    margin-top: 0;
+    margin-top: 11px;
+    padding: 15px 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .extra {
+    max-width: calc(@desktop-width - 60px);
+  }
+
   .extra__input {
-    padding-bottom: 120px;
-    padding-right: 300px;
+    width: 64%;
+    padding-bottom: 89px;
   }
 
   .extra__submit-btn {
-    padding: 14px 30px;
-    margin-left: 180px;
+    padding: 15px 30px;
+    margin: 7px 0 0 145px;
   }
 
-  .extra {
-    max-width: calc(@desktop-width - 60px);
+  .extra__text {
+    margin-right: 145px;
+    margin-top: 10px;
   }
 }

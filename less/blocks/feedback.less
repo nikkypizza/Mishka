@@ -1,7 +1,12 @@
 .feedback {
   background-color: @white;
-  min-height: 800px;
-  max-width: 320px;
+  min-height: 700px;
+  min-width: 100%;
+  margin: 0 auto;
+}
+
+.feedback__info-wrapper {
+  width: 320px;
   margin: 0 auto;
 }
 
@@ -11,7 +16,8 @@
   font-size: 18px;
   line-height: 30px;
   color: @black;
-  margin-left: 30px;
+  padding-left: 28px;
+  padding-top: 20px;
 }
 
 .feedback__email {
@@ -20,38 +26,55 @@
   font-size: 15px;
   line-height: 30px;
   color: @dark-grey;
-  margin-left: 30px;
+  margin: 25px 0 0 30px;
 }
 
 .feedback__email-title {
-  padding-right: 5px;
+  padding-right: 26px;
 }
 
 .feedback__email-adress {
   color: @dark-grey;
   text-decoration: none;
   border-bottom: 1px solid #62d1ba;
+  padding-bottom: 4px;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }
 
 .feedback__adress {
   font-family: @os-font;
   font-weight: normal;
+  display: flex;
   font-size: 15px;
   line-height: 30px;
   color: @dark-grey;
   margin-left: 30px;
+  padding-top: 14px;
 }
 
 .feedback__adress-title {
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.feedback__adress-content {
+  display: inline-block;
+  max-width: 150px;
+  min-height: 143px;
   padding-right: 5px;
 }
 
 .feedback__map {
   background-image: url("../img/map-mobile@1x.jpg");
   background-color: #e0e1d8;
-  width: 322px;
   height: 457px;
-  margin-top: 40px;
 }
 
 .feedback__btn {
@@ -65,9 +88,19 @@
   text-decoration: none;
   border: 2px solid @dark-grey;
   cursor: pointer;
-  margin-top: 38px;
-  margin-left: 30px;
+  display: block;
+  margin: 39px auto 38px auto;
   padding: 14px 54px;
+
+  &:hover {
+    background-color: @dark-grey;
+    color: @white;
+  }
+
+  &:active {
+    background-color: @dark-grey;
+    color: #8d8d8d;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -78,23 +111,30 @@
     flex-direction: column;
   }
 
+  .feedback__info-wrapper {
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+
   .feedback__data {
+    width: @tablet-width;
     display: flex;
     margin: 0 auto;
-    width: @tablet-width;
   }
 
   .feedback__title {
+    width: @tablet-width;
     font-size: 43px;
+    line-height: 50px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 50px;
-    width: @tablet-width;
+    padding-left: 46px;
+    padding-top: 27px;
 
     &::after {
       content: url("../img/icon-flag.svg");
       float: right;
-      padding-right: 50px;
+      padding-right: 99px;
       margin-top: -15px;
     }
   }
@@ -102,56 +142,72 @@
   .feedback__email-title {
     display: inline-block;
     width: 70px;
+    padding-right: 2px;
   }
 
   .feedback__adress-title {
     display: inline-block;
     text-align: center;
-    width: 90px;
     min-height: 10px;
     margin-right: 6px;
+    width: 30px;
+    padding-top: 0;
+    padding-left: 23px;
+  }
+
+  .feedback__adress-content {
+    max-width: 230px;
+    min-height: auto;
+    padding-left: 11px;
   }
 
   .feedback__email {
     font-size: 17px;
+    padding-left: 20px;
+    margin-top: 12px;
   }
 
   .feedback__adress {
     display: flex;
-    width: 350px;
-    min-height: 100px;
+    min-height: 110px;
     font-size: 17px;
+    padding: 0;
+    margin-top: 13px;
   }
 
   .feedback__map {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    margin-top: 19px;
+    width: 100vw;
   }
 
   .feedback__btn {
-    margin-top: 55px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 14px 40px;
+    margin: 55px auto 55px auto;
+    padding: 14px 38px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .feedback {
+    min-width: 1px;
+    max-width: @desktop-width;
     min-height: 560px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-width: @desktop-width;
+    margin-bottom: 71px;
   }
 
   .feedback__title {
     font-size: 53px;
     line-height: 57px;
+    padding-left: 0;
+    margin-top: 112px;
 
     &::after {
       float: left;
+      padding-top: 6px;
+      padding-left: 63px;
+      margin-right: -39px;
     }
   }
 
@@ -165,15 +221,31 @@
     margin-left: 11%;
   }
 
+  .feedback__email {
+    font-size: 17px;
+    padding-left: 90px;
+    margin-top: 5px;
+  }
+
+  .feedback__adress {
+    display: flex;
+    min-height: 110px;
+    font-size: 17px;
+    padding: 0;
+    margin-left: 95px;
+    margin-top: 30px;
+  }
+
   .feedback__map {
     width: 530px;
     height: 460px;
+    margin-top: 70px;
+    margin-left: 20px;
   }
 
   .feedback__btn {
     height: 100%;
     padding: 15px 40px;
-    margin-top: -105px;
-    margin-left: 170px;
+    margin: -70px 0 0 173px;
   }
 }
