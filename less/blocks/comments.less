@@ -1,9 +1,11 @@
 .comments {
   padding: 0 30px 50px 30px;
-  background-color: @white;
   min-height: 582px;
   max-width: 320px;
   margin: 0 auto;
+  background: @white url("../img/bg-zigzag-line.svg") no-repeat bottom;
+  background-size: 100vw auto;
+  box-sizing: border-box;
 }
 
 .comments__title {
@@ -99,6 +101,8 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    padding: 0 30px 66px 30px;
+    box-sizing: border-box;
   }
 
   .comments__title {
@@ -114,12 +118,13 @@
     max-width: 650px;
     font-size: 17px;
     margin-left: 20px;
+    margin-top: 43px;
     order: 3;
   }
 
   .comments__authorship {
     order: 4;
-    margin-top: 28px;
+    margin-top: 41px;
     margin-bottom: 65px;
   }
 
@@ -129,7 +134,7 @@
   }
 
   .comments__author-id {
-    margin: 0 0 0 20px;
+    margin: 3px 0 0 20px;
   }
 
   .comments__write {
@@ -146,7 +151,7 @@
     justify-content: flex-end;
     height: 59px;
     order: 5;
-    margin: 27px 24px 0 auto;
+    margin: 42px 24px 0 auto;
   }
 
   .comments__button {
@@ -161,6 +166,8 @@
     max-width: @desktop-width;
     min-height: 525px;
     padding-right: 0;
+    padding-bottom: 50px;
+    box-sizing: content-box;
   }
 
   .comments__title {
@@ -173,6 +180,7 @@
   .comments__text {
     max-width: 780px;
     margin-left: 145px;
+    margin-top: 23px;
   }
 
   .comments__authorship {

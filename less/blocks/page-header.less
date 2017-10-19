@@ -102,6 +102,7 @@
   line-height: 24px;
   color: @dark-grey;
   display: none;
+  z-index: 1;
 }
 
 @media (min-width: @tablet-width) {
@@ -120,7 +121,12 @@
     width: 110px;
     margin-left: 0;
     margin-right: 210px;
-    padding-top: 25px;
+    padding-top: 21px;
+  }
+
+  .page-header__logo-img {
+    width: 113px;
+    height: 47px;
   }
 
   .page-header__toggler {
@@ -165,9 +171,12 @@
 
   .page-header__logo {
     order: 1;
-    height: 76px;
-    margin-left: 165px;
-    margin-right: 112px;
+    margin: -12px 140px 0 140px;
+  }
+
+  .page-header__logo-img {
+    width: 149px;
+    height: 73px;
   }
 
   .page-header__cart {

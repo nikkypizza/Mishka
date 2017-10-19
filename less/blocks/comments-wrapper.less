@@ -4,6 +4,12 @@
     background-repeat: no-repeat;
     background-position: top left;
     min-width: 100px;
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 700px auto;
+    }
   }
 }
 
@@ -12,5 +18,11 @@
     background-position: left;
     max-width: @desktop-width;
     margin: 0 auto;
+  }
+
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    background-image: url("../img/review@2x.jpg");
+    background-size: 700px auto;
   }
 }
