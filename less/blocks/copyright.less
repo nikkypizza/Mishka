@@ -6,12 +6,21 @@
 }
 
 .copyright:active .copyright__title {
-  opacity: 0.3;
+  color: #bfbfbf;
 }
 
 .copyright__link {
   display: flex;
   align-items: center;
+  fill: #63d1bb;
+
+  &:hover {
+    fill: @footer-icon-hov;
+  }
+
+  &:active {
+    fill: @footer-icon-down;
+  }
 }
 
 .copyright__title {

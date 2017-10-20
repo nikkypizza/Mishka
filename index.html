@@ -17,7 +17,11 @@
         <img class="page-header__logo-img" src="img/logo-mobile.svg" width="86" height="36" alt="Мишка">
       </picture>
     </a>
-    <button type="button" class="page-header__toggler" title="Закрыть меню"></button>
+    <button type="button" class="page-header__toggler" title="Закрыть меню">
+      <svg width="21" height="21">
+        <use xlink:href="img/sprite.svg#icon-menu-close"></use>
+      </svg>
+    </button>
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item  nav__item--catalogue">
@@ -34,8 +38,22 @@
         </li>
       </ul>
     </nav>
-    <a class="page-header__search" href="#" title="Поиск"><span>Поиск по сайту</span></a>
-    <a class="page-header__cart" href="#">Корзина: пока пуста</a>
+    <div class="page-header__search-wrapper">
+      <a class="page-header__search" href="#" title="Поиск">
+        <svg class="page-header__search-icon" width="20" height="19">
+          <use xlink:href="img/sprite.svg#icon-search"></use>
+        </svg>
+        <span>Поиск по сайту</span>
+      </a>
+    </div>
+    <div class="page-header__cart-wrapper">
+      <a class="page-header__cart" href="#">
+        <svg class="page-header__cart-icon" width="20" height="19">
+          <use xlink:href="img/sprite.svg#icon-cart"></use>
+        </svg>
+        <span>Корзина: пока пуста</span>
+      </a>
+    </div>
     <span class="page-header__delivery">Бесплатная доставка по России</span>
   </header>
 
@@ -45,11 +63,15 @@
       <div class="headline__link-container">
         <a class="headline__link headline__link--interior" href="#">
           <p class="headline__text">Предметы интерьера</p>
-          <img class="headline__img" src="img/icon-interior.svg" width="41" height="63" alt="Интерьер">
+          <svg class="headline__img" width="40" height="62">
+            <use xlink:href="img/sprite.svg#icon-interior"></use>
+          </svg>
         </a>
         <a class="headline__link headline__link--toys" href="#">
           <p class="headline__text">Детские игрушки</p>
-          <img class="headline__img" src="img/icon-toy.svg" width="60" height="60" alt="Игрушки">
+          <svg class="headline__img" width="60" height="60">
+            <use xlink:href="img/sprite.svg#icon-toys"></use>
+          </svg>
         </a>
       </div>
     </section>
@@ -202,10 +224,16 @@
       </p>
     </footer>
   </div>
+  
   <script>
     document.createElement("picture");
   </script>
   <script src="js/picturefill.js" async></script>
+  <script src="js/svg4everybody.legacy.min.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+  </script>
 </body>
 
 </html>
