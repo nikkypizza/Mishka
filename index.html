@@ -18,10 +18,17 @@
       </picture>
     </a>
     <button type="button" class="page-header__toggler">
+      <svg width="21" height="21">
+        <use xlink:href="img/sprite.svg#icon-menu-close"></use>
+      </svg>
+    </button>
+<!--Класс-замена для .page-header__toggler
+    <button type="button" class="page-header__toggler--open">
       <svg width="20" height="14">
         <use xlink:href="img/sprite.svg#icon-menu-open"></use>
       </svg>
     </button>
+-->
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item  nav__item--catalogue">
@@ -234,7 +241,6 @@
   <script>
     svg4everybody();
   </script>
-  <script src="js/header.js"></script>
 </body>
 
 </html>
