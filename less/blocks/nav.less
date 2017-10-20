@@ -27,7 +27,6 @@
 }
 
 .nav__item--catalogue {
-  padding-top: 11px;
   z-index: 1;
 }
 
@@ -48,6 +47,7 @@
 
 @media (min-width: @tablet-width) {
   .nav {
+    display: block;
     order: 3;
   }
 
@@ -127,4 +127,8 @@
     margin-top: 5px;
     margin-right: -7px;
   }
+}
+
+.nav--display-none {
+  display: none;
 }

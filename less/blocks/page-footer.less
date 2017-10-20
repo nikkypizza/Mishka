@@ -1,6 +1,6 @@
 .page-footer {
   background-color: @light-grey;
-  min-height: 160px;
+  height: 160px;
   display: flex;
   flex-direction: column;
 }
@@ -12,7 +12,7 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     padding: 0 3%;
-    min-height: 143px;
+    height: 143px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -27,18 +27,18 @@
     margin-right: 84px;
 
     &:hover {
-      opacity: 0.5;
+      fill: @footer-icon-hov;
     }
 
     &:active {
-      opacity: 0.3;
+      fill: @footer-icon-down;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    min-height: 143px;
+    height: 143px;
     margin: 0 auto;
     max-width: @desktop-width;
   }

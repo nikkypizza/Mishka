@@ -10,10 +10,14 @@
 .catalog-list__item {
   .clear-li;
   margin: 10px auto 20px auto;
-  max-width: 260px;
+  width: 260px;
 }
 
 @media (min-width: @tablet-width) {
+  .catalog-list {
+    margin-top: -14px;
+  }
+
   .catalog-list__item {
     min-width: 668px;
     margin: 47px auto 0 auto;
@@ -24,7 +28,7 @@
   .catalog-list {
     flex-direction: row;
     max-width: @desktop-width;
-    margin: 110px auto 0 auto;
+    margin: 93px auto 0 auto;
   }
 
   .catalog-list__item {
