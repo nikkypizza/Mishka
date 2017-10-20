@@ -8,7 +8,7 @@
   display: block;
   padding: 0;
   width: 86px;
-  margin: 0 auto 3px auto;
+  margin: -3px auto 15px auto;
 
   &:hover {
     opacity: 0.5;
@@ -26,12 +26,12 @@
   background-color: transparent;
   float: right;
   cursor: pointer;
-  margin-top: -37px;
+  margin-top: -50px;
   margin-right: 35px;
 }
 
 .page-header__search-wrapper {
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .page-header__cart-wrapper {
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
@@ -209,4 +209,8 @@
   .page-header__delivery {
     margin-top: -100px;
   }
+}
+
+.page-header--display-flex {
+  display: flex;
 }
