@@ -1,7 +1,7 @@
 var overlay = document.querySelector(".modal");
 var modal = document.querySelector(".modal__wrapper");
 var modalButton = document.querySelector(".modal__submit");
-var buyButton = document.querySelectorAll(".promo__order-link", "catalog-item__button");
+var buyButton = document.querySelectorAll(".js-addToCart");
 
 if (overlay) {
   for (var i = 0; i < buyButton.length; i++) buyButton[i].addEventListener("click", function(event) {

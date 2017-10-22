@@ -27,6 +27,13 @@
         <use xlink:href="#icon-menu-close"></use>
       </svg>
     </button>
+<!--Класс-замена для .page-header__toggler
+    <button type="button" class="page-header__toggler-open">
+      <svg width="20" height="14">
+        <use xlink:href="#icon-menu-open"></use>
+      </svg>
+    </button>
+-->
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item  nav__item--catalogue current-page">
@@ -84,7 +91,7 @@
             <p class="catalog-item__details">Рост 30 см, вес 200г</p>
             <div class="catalog-item__price-wrapper">
               <span class="catalog-item__price">1 200 руб.</span>
-              <button class="catalog-item__button" type="button" title="Добавить в корзину">
+              <button class="catalog-item__button js-addToCart" type="button" title="Добавить в корзину">
                 <svg width="20" height="19">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -113,7 +120,7 @@
             <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
             <div class="catalog-item__price-wrapper">
               <span class="catalog-item__price">690 руб.</span>
-              <button class="catalog-item__button" type="button" title="Добавить в корзину">
+              <button class="catalog-item__button js-addToCart" type="button" title="Добавить в корзину">
                 <svg width="20" height="19">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -142,7 +149,7 @@
             <p class="catalog-item__details catalog-item__details--big-basket">Диаметр 30 см, высота 30см</p>
             <div class="catalog-item__price-wrapper">
               <span class="catalog-item__price">1 500 руб.</span>
-              <button class="catalog-item__button" type="button" title="Добавить в корзину">
+              <button class="catalog-item__button js-addToCart" type="button" title="Добавить в корзину">
                 <svg width="20" height="19">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
@@ -171,15 +178,20 @@
       <a class="video-about__link" href="form.html">СДЕЛАТЬ ЗАКАЗ</a>
     </article>
 
-    <div class="modal display-none">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__text">Выберите размер:</p>
-      <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
-        <input class="modal__radio" type="radio" name="product-size" value="S">S<br>
-        <input class="modal__radio" type="radio" name="product-size" value="M">M<br>
-        <input class="modal__radio" type="radio" name="product-size" value="L">L<br>
+    <div class=" modal display-none">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
+          <input class="modal__radio" type="radio" name="product-size" value="S" id="size-s" checked>
+          <label for="size-s">S</label>
+          <input class="modal__radio" type="radio" name="product-size" value="M" id="size-m">
+          <label for="size-m">M</label>
+          <input class="modal__radio" type="radio" name="product-size" value="L" id="size-l">
+          <label for="size-l">L</label>
+        </form>
         <button class="modal__submit" type="submit">Добавить</button>
-      </form>
+      </div>
     </div>
   </main>
 
