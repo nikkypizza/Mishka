@@ -10,6 +10,10 @@
 
 
 <body>
+  <div style="display: none;">
+    <include href="build/img/sprite.svg"></include>
+  </div>
+
   <header class="page-header">
     <a href="index.html" class="page-header__logo" title="На главную">
       <picture>
@@ -20,7 +24,7 @@
     </a>
     <button type="button" class="page-header__toggler">
       <svg width="21" height="21">
-        <use xlink:href="img/sprite.svg#icon-menu-close"></use>
+        <use xlink:href="#icon-menu-close"></use>
       </svg>
     </button>
     <nav class="nav">
@@ -42,7 +46,7 @@
     <div class="page-header__search-wrapper">
       <a class="page-header__search" href="#" title="Поиск">
         <svg class="page-header__search-icon" width="20" height="19">
-          <use xlink:href="img/sprite.svg#icon-search"></use>
+          <use xlink:href="#icon-search"></use>
         </svg>
         <span>Поиск по сайту</span>
       </a>
@@ -50,7 +54,7 @@
     <div class="page-header__cart-wrapper">
       <a class="page-header__cart" href="#">
         <svg class="page-header__cart-icon" width="20" height="19">
-          <use xlink:href="img/sprite.svg#icon-cart"></use>
+          <use xlink:href="#icon-cart"></use>
         </svg>
         <span>Корзина: пока пуста</span>
       </a>
@@ -82,7 +86,7 @@
               <span class="catalog-item__price">1 200 руб.</span>
               <button class="catalog-item__button" type="button" title="Добавить в корзину">
                 <svg width="20" height="19">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </button>
             </div>
@@ -111,7 +115,7 @@
               <span class="catalog-item__price">690 руб.</span>
               <button class="catalog-item__button" type="button" title="Добавить в корзину">
                 <svg width="20" height="19">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </button>
             </div>
@@ -140,7 +144,7 @@
               <span class="catalog-item__price">1 500 руб.</span>
               <button class="catalog-item__button" type="button" title="Добавить в корзину">
                 <svg width="20" height="19">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </button>
             </div>
@@ -183,28 +187,28 @@
     <footer class="page-footer">
       <a class="page-footer__logo" href="index.html" title="На главную">
         <svg width="102" height="34">
-          <use xlink:href="img/sprite.svg#logo-footer"></use>
+          <use xlink:href="#icon-footer"></use>
         </svg>
       </a>
       <ul class="social">
         <li class="social__item">
           <a class="social__link social__link--instagram" title="Instagram" href="https://www.instagram.com/htmlacademy">
             <svg width="22" height="21">
-              <use xlink:href="img/sprite.svg#logo-insta"></use>
+              <use xlink:href="#icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" title="Facebook" href="https://www.facebook.com/htmlacademy">
             <svg width="15" height="28">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
+              <use xlink:href="#icon-fb"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--twitter" title="Twitter" href="https://twitter.com/htmlacademy_ru">
             <svg width="23" height="20">
-              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
@@ -213,7 +217,7 @@
         <a class="copyright__link" title="HTML Academy" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__title">Разработано</span>
           <svg width="27" height="34">
-            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            <use xlink:href="#icon-htmlacademy"></use>
           </svg>
         </a>
       </p>
