@@ -7,7 +7,7 @@
 }
 
 .catalog-item__info {
-  margin-top: -3px;
+  transition: 0.1s linear;
 
   &:active {
     .active-shadow;
@@ -17,6 +17,7 @@
 .catalog-item__img {
   background-color: #ebebeb;
   position: relative;
+  display: block;
   z-index: 1;
 }
 
@@ -79,13 +80,17 @@
   fill: #d3d2d2;
   cursor: pointer;
   margin-right: 30px;
+  padding: 0;
+  transition: 0.2s linear;
 
   &:hover {
     fill: @footer-icon-hov;
+    transition: 0.1s linear;
   }
 
   &:active {
     fill: #d0f1ea;
+    transition: 0.015s linear;
   }
 }
 
@@ -121,14 +126,14 @@
   .catalog-item__info {
     display: flex;
     flex-direction: column;
+  }
 
-    &:hover {
-      .hover-shadow;
-    }
+  .catalog-item:hover .catalog-item__info {
+    .hover-shadow;
+  }
 
-    &:active {
-      .active-shadow;
-    }
+  .catalog-item:active .catalog-item__info {
+    .active-shadow;
   }
 
   .catalog-item__price-wrapper {

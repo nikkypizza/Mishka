@@ -10,6 +10,10 @@
 
 
 <body>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"</include>
+  </div>
+
   <header class="page-header">
     <a href="index.html" class="page-header__logo" title="На главную">
       <picture>
@@ -20,9 +24,16 @@
     </a>
     <button type="button" class="page-header__toggler">
       <svg width="21" height="21">
-        <use xlink:href="img/sprite.svg#icon-menu-close"></use>
+        <use xlink:href="#icon-menu-close"></use>
       </svg>
     </button>
+<!--Класс-замена для .page-header__toggler
+    <button type="button" class="page-header__toggler-open">
+      <svg width="20" height="14">
+        <use xlink:href="#icon-menu-open"></use>
+      </svg>
+    </button>
+-->
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item  nav__item--catalogue current-page">
@@ -42,7 +53,7 @@
     <div class="page-header__search-wrapper">
       <a class="page-header__search" href="#" title="Поиск">
         <svg class="page-header__search-icon" width="20" height="19">
-          <use xlink:href="img/sprite.svg#icon-search"></use>
+          <use xlink:href="#icon-search"></use>
         </svg>
         <span>Поиск по сайту</span>
       </a>
@@ -50,7 +61,7 @@
     <div class="page-header__cart-wrapper">
       <a class="page-header__cart" href="#">
         <svg class="page-header__cart-icon" width="20" height="19">
-          <use xlink:href="img/sprite.svg#icon-cart"></use>
+          <use xlink:href="#icon-cart"></use>
         </svg>
         <span>Корзина: пока пуста</span>
       </a>
@@ -80,9 +91,9 @@
             <p class="catalog-item__details">Рост 30 см, вес 200г</p>
             <div class="catalog-item__price-wrapper">
               <span class="catalog-item__price">1 200 руб.</span>
-              <button class="catalog-item__button" type="button" title="Добавить в корзину">
+              <button class="catalog-item__button js-addToCart" type="button" title="Добавить в корзину">
                 <svg width="20" height="19">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </button>
             </div>
@@ -109,9 +120,9 @@
             <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
             <div class="catalog-item__price-wrapper">
               <span class="catalog-item__price">690 руб.</span>
-              <button class="catalog-item__button" type="button" title="Добавить в корзину">
+              <button class="catalog-item__button js-addToCart" type="button" title="Добавить в корзину">
                 <svg width="20" height="19">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </button>
             </div>
@@ -138,9 +149,9 @@
             <p class="catalog-item__details catalog-item__details--big-basket">Диаметр 30 см, высота 30см</p>
             <div class="catalog-item__price-wrapper">
               <span class="catalog-item__price">1 500 руб.</span>
-              <button class="catalog-item__button" type="button" title="Добавить в корзину">
+              <button class="catalog-item__button js-addToCart" type="button" title="Добавить в корзину">
                 <svg width="20" height="19">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </button>
             </div>
@@ -167,15 +178,20 @@
       <a class="video-about__link" href="form.html">СДЕЛАТЬ ЗАКАЗ</a>
     </article>
 
-    <div class="modal display-none">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__text">Выберите размер:</p>
-      <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
-        <input class="modal__radio" type="radio" name="product-size" value="S">S<br>
-        <input class="modal__radio" type="radio" name="product-size" value="M">M<br>
-        <input class="modal__radio" type="radio" name="product-size" value="L">L<br>
+    <div class=" modal display-none">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
+          <input class="modal__radio" type="radio" name="product-size" value="S" id="size-s" checked>
+          <label for="size-s">S</label>
+          <input class="modal__radio" type="radio" name="product-size" value="M" id="size-m">
+          <label for="size-m">M</label>
+          <input class="modal__radio" type="radio" name="product-size" value="L" id="size-l">
+          <label for="size-l">L</label>
+        </form>
         <button class="modal__submit" type="submit">Добавить</button>
-      </form>
+      </div>
     </div>
   </main>
 
@@ -183,28 +199,28 @@
     <footer class="page-footer">
       <a class="page-footer__logo" href="index.html" title="На главную">
         <svg width="102" height="34">
-          <use xlink:href="img/sprite.svg#logo-footer"></use>
+          <use xlink:href="#icon-footer"></use>
         </svg>
       </a>
       <ul class="social">
         <li class="social__item">
-          <a class="social__link social__link--instagram" title="Instagram" href="#">
+          <a class="social__link social__link--instagram" title="Instagram" href="https://www.instagram.com/htmlacademy">
             <svg width="22" height="21">
-              <use xlink:href="img/sprite.svg#logo-insta"></use>
+              <use xlink:href="#icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" title="Facebook" href="#">
+          <a class="social__link social__link--facebook" title="Facebook" href="https://www.facebook.com/htmlacademy">
             <svg width="15" height="28">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
+              <use xlink:href="#icon-fb"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--twitter" title="Twitter" href="#">
+          <a class="social__link social__link--twitter" title="Twitter" href="https://twitter.com/htmlacademy_ru">
             <svg width="23" height="20">
-              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
@@ -213,7 +229,7 @@
         <a class="copyright__link" title="HTML Academy" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__title">Разработано</span>
           <svg width="27" height="34">
-            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            <use xlink:href="#icon-htmlacademy"></use>
           </svg>
         </a>
       </p>
@@ -230,6 +246,7 @@
   <script>
     svg4everybody();
   </script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>

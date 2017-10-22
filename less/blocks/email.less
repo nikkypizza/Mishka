@@ -17,12 +17,14 @@
 .email__input:focus + .email__icon {
   border-bottom: 2px solid @input-hover-color;
   fill: @input-hover-color;
+  transition: 0.1s linear;
 }
 
 .email__input-wrapper:hover .email__input,
 .email__input-wrapper:hover .email__icon {
   border-bottom: 2px solid @input-hover-color;
   fill: @input-hover-color;
+  transition: 0.1s linear;
 }
 
 .email__input {
@@ -32,10 +34,12 @@
   border-radius: 0;
   border: none;
   border-bottom: 2px solid @black;
+  transition: 0.2s linear;
 
   &:focus {
     outline: none;
     border-bottom: 2px solid @input-hover-color;
+    transition: 0.1s linear;
   }
 }
 
@@ -43,6 +47,7 @@
   border-bottom: 2px solid black;
   display: inline-block;
   padding: 0 7px 7px 0;
+  transition: 0.2s linear;
 }
 
 @media (min-width: @tablet-width) {

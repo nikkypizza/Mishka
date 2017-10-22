@@ -9,8 +9,8 @@
 </head>
 
 <body>
-  <div style="display: none;">
-    <include href="img/sprite.svg"></include>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"</include>
   </div>
 
   <header class="page-header">
@@ -27,9 +27,9 @@
       </svg>
     </button>
 <!--Класс-замена для .page-header__toggler
-    <button type="button" class="page-header__toggler--open">
+    <button type="button" class="page-header__toggler-open">
       <svg width="20" height="14">
-        <use xlink:href="img/sprite.svg#icon-menu-open"></use>
+        <use xlink:href="#icon-menu-open"></use>
       </svg>
     </button>
 -->
@@ -52,7 +52,7 @@
     <div class="page-header__search-wrapper">
       <a class="page-header__search" href="#" title="Поиск">
         <svg class="page-header__search-icon" width="20" height="19">
-          <use xlink:href="img/sprite.svg#icon-search"></use>
+          <use xlink:href="#icon-search"></use>
         </svg>
         <span>Поиск по сайту</span>
       </a>
@@ -75,13 +75,13 @@
         <a class="headline__link headline__link--interior" href="#">
           <p class="headline__text">Предметы интерьера</p>
           <svg class="headline__img" width="40" height="62">
-            <use xlink:href="img/sprite.svg#icon-interior"></use>
+            <use xlink:href="#icon-interior"></use>
           </svg>
         </a>
         <a class="headline__link headline__link--toys" href="#">
           <p class="headline__text">Детские игрушки</p>
           <svg class="headline__img" width="60" height="60">
-            <use xlink:href="img/sprite.svg#icon-toys"></use>
+            <use xlink:href="#icon-toy"></use>
           </svg>
         </a>
       </div>
@@ -110,7 +110,7 @@
         </picture>
         <div class="promo__buy">
           <p class="promo__price">Цена: <span>990</span> руб.</p>
-          <a href="#" class="promo__order-link">Заказать</a>
+          <a href="#" class="promo__order-link js-addToCart">Заказать</a>
         </div>
       </div>
     </section>
@@ -158,24 +158,26 @@
     <div class="comments-wrapper">
       <section class="comments">
         <h2 class="comments__title">Отзывы</h2>
+        <div class="comments__review">
         <p class="comments__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
         <div class="comments__authorship">
           <h4 class="comments__author">Анастасия Красильникова</h4>
           <p class="comments__author-id">@misssssiskras</p>
         </div>
+        </div>
         <div class="comments__buttons">
           <button class="comments__button" type="button" title="Предыдущий комментарий">
           <svg width="50" height="26">
-          <use xlink:href="img/sprite.svg#icon-left-arrow"></use>
+          <use xlink:href="#icon-left-arrow"></use>
           </svg>
         </button>
           <button class="comments__button" type="button" title="Следующий комментарий">
           <svg width="50" height="26">
-          <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
+          <use xlink:href="#icon-right-arrow"></use>
           </svg>
         </button>
         </div>
-        <button class="comments__write" type="button">Написать</button>
+        <a class="comments__write" href="https://mishka.ru/comments">Написать</a>
       </section>
     </div>
 
@@ -195,9 +197,9 @@
         </div>
       </div>
       <div class="feedback__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1508603614977" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1508603614977" allowfullscreen></iframe>
       </div>
-      <button class="feedback__btn" type="button">Напишите нам</button>
+      <a class="feedback__btn" href="https://mishka.ru/feedback">Напишите нам</a>
     </section>
   </main>
 
@@ -205,28 +207,28 @@
     <footer class="page-footer">
       <a class="page-footer__logo current-page" href="index.html" tabindex="-1">
         <svg width="102" height="34">
-          <use xlink:href="img/sprite.svg#logo-footer"></use>
+          <use xlink:href="#icon-footer"></use>
         </svg>
       </a>
       <ul class="social">
         <li class="social__item">
-          <a class="social__link social__link--instagram" title="Instagram" href="#">
+          <a class="social__link social__link--instagram" title="Instagram" href="https://www.instagram.com/htmlacademy">
             <svg width="22" height="21">
-              <use xlink:href="img/sprite.svg#logo-insta"></use>
+              <use xlink:href="#icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" title="Facebook" href="#">
+          <a class="social__link social__link--facebook" title="Facebook" href="https://www.facebook.com/htmlacademy">
             <svg width="15" height="28">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
+              <use xlink:href="#icon-fb"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--twitter" title="Twitter" href="#">
+          <a class="social__link social__link--twitter" title="Twitter" href="https://twitter.com/htmlacademy_ru">
             <svg width="23" height="20">
-              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
@@ -235,7 +237,7 @@
         <a class="copyright__link" title="HTML Academy" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__title">Разработано</span>
           <svg width="27" height="34">
-            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            <use xlink:href="#icon-htmlacademy"></use>
           </svg>
         </a>
       </p>
@@ -251,6 +253,7 @@
   <script>
     svg4everybody();
   </script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>

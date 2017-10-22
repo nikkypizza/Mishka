@@ -64,9 +64,11 @@
   cursor: pointer;
   border: 2px solid @grey;
   padding: 18px 33px;
+  transition: 0.3s linear;
 
   &:hover {
     border: 2px solid #c7c7c7;
+    transition: 0.2s linear;
   }
 }
 
@@ -86,9 +88,11 @@
   cursor: pointer;
   background-color: #63d1bb;
   color: @white;
+  transition: 0.1s linear;
 
   &:hover {
     background-color: #59d5bc;
+    transition: 0.1s linear;
   }
 
   &:active {
@@ -129,4 +133,12 @@
     align-self: center;
     padding: 18px 128px;
   }
+}
+
+.modal--on{
+  display: block;
+}
+
+.overlay--on{
+  display: block;
 }

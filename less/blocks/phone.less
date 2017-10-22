@@ -17,12 +17,14 @@
 .phone__input:focus + .phone__icon {
   border-bottom: 2px solid @input-hover-color;
   fill: @input-hover-color;
+  transition: 0.1s linear;
 }
 
 .phone__input-wrapper:hover .phone__input,
 .phone__input-wrapper:hover .phone__icon {
   border-bottom: 2px solid @input-hover-color;
   fill: @input-hover-color;
+  transition: 0.1s linear;
 }
 
 .phone__input {
@@ -32,10 +34,12 @@
   padding: 21px 0 16px 0;
   width: 100%;
   border-radius: 0;
+  transition: 0.2s linear;
 
   &:focus {
     outline: none;
     border-bottom: 2px solid @input-hover-color;
+    transition: 0.1s linear;
   }
 }
 
@@ -43,6 +47,7 @@
   border-bottom: 2px solid black;
   display: inline-block;
   padding: 0 12px 12px 0;
+  transition: 0.2s linear;
 }
 
 @media (min-width: @tablet-width) {

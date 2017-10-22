@@ -129,6 +129,17 @@
   }
 }
 
-.nav--display-none {
+//JS в потоке
+.nav__item--catalogue
+.nav__item--knitting {
   display: none;
+}
+
+//JS вне потока
+.nav__item--catalogue
+.nav__item--knitting {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
 }
