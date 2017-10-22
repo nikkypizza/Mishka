@@ -10,11 +10,17 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-footer-wrapper {
+    background-color: @light-grey;
+  }
+
   .page-footer {
     padding: 0 3%;
     height: 143px;
     display: flex;
     flex-direction: row;
+    width: @tablet-width;
+    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
   }
@@ -23,15 +29,17 @@
     display: block;
     width: 86px;
     height: 36px;
-    margin-left: 25px;
-    margin-right: 84px;
+    margin-left: 50px;
+    transition: 0.4s linear;
 
     &:hover {
       fill: @footer-icon-hov;
+      transition: 0.2s linear;
     }
 
     &:active {
       fill: @footer-icon-down;
+      transition: 0.2s linear;
     }
   }
 }
@@ -40,11 +48,11 @@
   .page-footer {
     height: 143px;
     margin: 0 auto;
-    max-width: @desktop-width;
+    width: @desktop-width;
   }
 
   .page-footer__logo {
-    margin-right: 77px;
+    margin-right: 90px;
     margin-left: 0;
   }
 

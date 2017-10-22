@@ -38,14 +38,17 @@
   text-decoration: none;
   border-bottom: 1px solid #62d1ba;
   padding-bottom: 4px;
+  transition: .2s linear;
 
   &:hover {
     color: #46c1ae;
+    transition: .2s linear;
   }
 
   &:active {
     color: #d3ede8;
     border-bottom-color: #ecf9f7;
+    transition: .015s linear;
   }
 }
 
@@ -84,6 +87,12 @@
   }
 }
 
+.feedback__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .feedback__btn {
   font-family: @os-font;
   font-weight: bold;
@@ -98,10 +107,12 @@
   display: block;
   margin: 39px auto 38px auto;
   padding: 14px 54px;
+  transition: .1s linear;
 
   &:hover {
     background-color: @dark-grey;
     color: @white;
+    transition: .1s linear;
   }
 
   &:active {
