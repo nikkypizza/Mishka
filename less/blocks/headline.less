@@ -95,14 +95,13 @@
 
     &::after {
       content: "";
-      background: url("../img/bg-zigzag-fill.svg");
+      background: url("../img/bg-zigzag-fill.svg") repeat-x;
       background-color: transparent;
-      background-repeat: repeat-x;
       position: absolute;
       height: 34px;
       width: 100%;
-      background-size: 120vw auto;
-      bottom: -15px;
+      background-size: 100% auto;
+      bottom: -20px;
       left: 0;
       overflow: hidden;
     }
@@ -175,7 +174,8 @@
     }
 
     &::after {
-      bottom: -10px;
+      background-size: auto;
+      bottom: -17px;
     }
   }
 
