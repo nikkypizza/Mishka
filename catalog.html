@@ -8,10 +8,9 @@
   <title>Мишка - Товары</title>
 </head>
 
-
 <body>
   <div style="display: none">
-    <include src="build/img/sprite.svg"</include>
+    <include src="build/img/sprite.svg" </include>
   </div>
 
   <header class="page-header">
@@ -27,7 +26,7 @@
         <use xlink:href="#icon-menu-close"></use>
       </svg>
     </button>
-<!--Класс-замена для .page-header__toggler
+    <!--Класс-замена для .page-header__toggler
     <button type="button" class="page-header__toggler-open">
       <svg width="20" height="14">
         <use xlink:href="#icon-menu-open"></use>
@@ -91,11 +90,11 @@
             <p class="catalog-item__details">Рост 30 см, вес 200г</p>
             <div class="catalog-item__price-wrapper">
               <span class="catalog-item__price">1 200 руб.</span>
-              <button class="catalog-item__button js-addToCart" type="button" title="Добавить в корзину">
+              <a class="catalog-item__button js-addToCart" href="cart.html" title="Добавить в корзину">
                 <svg width="20" height="19">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </article>
@@ -120,11 +119,11 @@
             <p class="catalog-item__details">Диаметр 15 см, высота 10 см</p>
             <div class="catalog-item__price-wrapper">
               <span class="catalog-item__price">690 руб.</span>
-              <button class="catalog-item__button js-addToCart" type="button" title="Добавить в корзину">
+              <a class="catalog-item__button js-addToCart" href="cart.html" title="Добавить в корзину">
                 <svg width="20" height="19">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </article>
@@ -149,11 +148,11 @@
             <p class="catalog-item__details catalog-item__details--big-basket">Диаметр 30 см, высота 30см</p>
             <div class="catalog-item__price-wrapper">
               <span class="catalog-item__price">1 500 руб.</span>
-              <button class="catalog-item__button js-addToCart" type="button" title="Добавить в корзину">
+              <a class="catalog-item__button js-addToCart" href="cart.html" title="Добавить в корзину">
                 <svg width="20" height="19">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </article>
@@ -183,14 +182,22 @@
         <h2 class="modal__title">Добавить в корзину</h2>
         <p class="modal__text">Выберите размер:</p>
         <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
-          <input class="modal__radio" type="radio" name="product-size" value="S" id="size-s" checked>
-          <label for="size-s">S</label>
-          <input class="modal__radio" type="radio" name="product-size" value="M" id="size-m">
-          <label for="size-m">M</label>
-          <input class="modal__radio" type="radio" name="product-size" value="L" id="size-l">
-          <label for="size-l">L</label>
+          <ul class="modal__list">
+            <li class="modal__list-item">
+              <input class="modal__radio" type="radio" name="product-size" value="S" id="size-s" checked>
+              <label for="size-s">S</label>
+            </li>
+            <li class="modal__list-item">
+              <input class="modal__radio" type="radio" name="product-size" value="M" id="size-m">
+              <label for="size-m">M</label>
+            </li>
+            <li class="modal__list-item">
+              <input class="modal__radio" type="radio" name="product-size" value="L" id="size-l">
+              <label for="size-l">L</label>
+            </li>
+          </ul>
+          <button class="modal__submit" type="submit">Добавить</button>
         </form>
-        <button class="modal__submit" type="submit">Добавить</button>
       </div>
     </div>
   </main>

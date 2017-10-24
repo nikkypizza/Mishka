@@ -10,7 +10,7 @@
 
 <body>
   <div style="display: none">
-    <include src="build/img/sprite.svg"</include>
+    <include src="build/img/sprite.svg" </include>
   </div>
 
   <header class="page-header">
@@ -26,7 +26,7 @@
         <use xlink:href="#icon-menu-close"></use>
       </svg>
     </button>
-<!--Класс-замена для .page-header__toggler
+    <!--Класс-замена для .page-header__toggler
     <button type="button" class="page-header__toggler-open">
       <svg width="20" height="14">
         <use xlink:href="#icon-menu-open"></use>
@@ -110,7 +110,7 @@
         </picture>
         <div class="promo__buy">
           <p class="promo__price">Цена: <span>990</span> руб.</p>
-          <a href="#" class="promo__order-link js-addToCart">Заказать</a>
+          <a href="cart.html" class="promo__order-link js-addToCart">Заказать</a>
         </div>
       </div>
     </section>
@@ -120,14 +120,22 @@
         <h2 class="modal__title">Добавить в корзину</h2>
         <p class="modal__text">Выберите размер:</p>
         <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
-          <input class="modal__radio" type="radio" name="product-size" value="S" id="size-s" checked>
-          <label for="size-s">S</label>
-          <input class="modal__radio" type="radio" name="product-size" value="M" id="size-m">
-          <label for="size-m">M</label>
-          <input class="modal__radio" type="radio" name="product-size" value="L" id="size-l">
-          <label for="size-l">L</label>
+          <ul class="modal__list">
+            <li class="modal__list-item">
+              <input class="modal__radio" type="radio" name="product-size" value="S" id="size-s" checked>
+              <label for="size-s">S</label>
+            </li>
+            <li class="modal__list-item">
+              <input class="modal__radio" type="radio" name="product-size" value="M" id="size-m">
+              <label for="size-m">M</label>
+            </li>
+            <li class="modal__list-item">
+              <input class="modal__radio" type="radio" name="product-size" value="L" id="size-l">
+              <label for="size-l">L</label>
+            </li>
+          </ul>
+          <button class="modal__submit" type="submit">Добавить</button>
         </form>
-        <button class="modal__submit" type="submit">Добавить</button>
       </div>
     </div>
 
@@ -159,11 +167,11 @@
       <section class="comments">
         <h2 class="comments__title">Отзывы</h2>
         <div class="comments__review">
-        <p class="comments__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-        <div class="comments__authorship">
-          <h4 class="comments__author">Анастасия Красильникова</h4>
-          <p class="comments__author-id">@misssssiskras</p>
-        </div>
+          <p class="comments__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+          <div class="comments__authorship">
+            <h4 class="comments__author">Анастасия Красильникова</h4>
+            <p class="comments__author-id">@misssssiskras</p>
+          </div>
         </div>
         <div class="comments__buttons">
           <button class="comments__button" type="button" title="Предыдущий комментарий">
@@ -177,7 +185,7 @@
           </svg>
         </button>
         </div>
-        <a class="comments__write" href="https://mishka.ru/comments">Написать</a>
+        <a class="comments__write" href="comments.html">Написать</a>
       </section>
     </div>
 
