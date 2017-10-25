@@ -1,6 +1,5 @@
 .promo {
   padding: 27px 31px 57px 31px;
-  min-height: 772px;
   max-width: 320px;
   margin: 0 auto;
   display: flex;
@@ -31,12 +30,19 @@
   color: #63d1bb;
 }
 
+.promo__details-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .promo__description {
   font-family: @os-font;
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
   margin-top: 22px;
+  margin-bottom: 0;
   color: @dark-grey;
 }
 
@@ -104,7 +110,6 @@
 @media (min-width: @tablet-width) {
   .promo {
     max-width: 670px;
-    min-height: 625px;
     padding: 0;
     flex-wrap: wrap;
     flex-direction: row;
@@ -115,7 +120,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
-    margin-top: 34px;
+    margin-top: 29px;
     max-height: 50px;
   }
 
@@ -135,22 +140,31 @@
 
   .promo__info-wrapper {
     width: @tablet-width;
-    height: 500px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+    margin-top: 35px;
   }
 
   .promo__description {
     font-size: 17px;
     line-height: 30px;
     width: 290px;
-    margin-top: 25px;
+    margin-top: 0;
+    margin-bottom: 17px;
     order: 1;
+  }
+
+  .promo__details-wrapper {
+    min-height: 200px;
   }
 
   .promo__details {
     width: 300px;
+    min-height: 50px;
+    margin-bottom: 135px;
     margin-right: -10px;
     order: 2;
   }
@@ -163,9 +177,7 @@
   }
 
   .promo__image {
-    min-width: 303px;
     height: auto;
-    margin: 35px 3px 0 44px;
     background-color: #8bbfba;
     order: 4;
   }
@@ -177,7 +189,10 @@
 
   .promo__buy {
     display: flex;
-    max-width: 290px;
+    width: 290px;
+    min-height: 20px;
+    margin-top: -137px;
+    margin-bottom: 18px;
     flex-direction: column;
     order: 3;
   }
@@ -186,8 +201,7 @@
 @media (min-width: @desktop-width) {
   .promo {
     min-width: @desktop-width;
-    min-height: 727px;
-    padding-bottom: 80px;
+    padding-bottom: 43px;
     box-sizing: content-box;
   }
 
@@ -215,12 +229,15 @@
 
   .promo__info-wrapper {
     justify-content: space-between;
-    margin-left: 189px;
+    margin-left: 177px;
+    margin-top: 13px;
+    margin-bottom: 0;
     width: 100%;
   }
 
   .promo__description {
     margin-top: 20px;
+    margin-bottom: 46px;
   }
 
   .promo__details {
@@ -229,10 +246,11 @@
 
   .promo__image {
     margin-top: -138px;
-    margin-left: 58px;
+    margin-left: auto;
   }
 
   .promo__buy {
     margin-bottom: 5px;
+    margin-top: -144px;
   }
 }

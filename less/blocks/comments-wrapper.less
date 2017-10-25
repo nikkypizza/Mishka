@@ -3,27 +3,24 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: top left;
+    background-size: auto 79%;
     min-width: 100px;
 
     @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
+    (min-resolution: @retina-dppx) {
       background-image: url("../img/review@2x.jpg");
-      background-size: 700px auto;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .comments-wrapper {
-    background-position: left;
     max-width: @desktop-width;
     margin: 0 auto;
   }
 
   @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
-    background-position: top left;
+  (min-resolution: @retina-dppx) {
     background-image: url("../img/review@2x.jpg");
-    background-size: 700px auto;
   }
 }
