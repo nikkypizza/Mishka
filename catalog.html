@@ -58,7 +58,7 @@
       </a>
     </div>
     <div class="page-header__cart-wrapper">
-      <a class="page-header__cart" href="#">
+      <a class="page-header__cart" href="cart.html">
         <svg class="page-header__cart-icon" width="20" height="19">
           <use xlink:href="#icon-cart"></use>
         </svg>
@@ -176,30 +176,6 @@
       <p class="video-about__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
       <a class="video-about__link" href="form.html">СДЕЛАТЬ ЗАКАЗ</a>
     </article>
-
-    <div class=" modal display-none">
-      <div class="modal__wrapper">
-        <h2 class="modal__title">Добавить в корзину</h2>
-        <p class="modal__text">Выберите размер:</p>
-        <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
-          <ul class="modal__list">
-            <li class="modal__list-item">
-              <input class="modal__radio" type="radio" name="product-size" value="S" id="size-s" checked>
-              <label for="size-s">S</label>
-            </li>
-            <li class="modal__list-item">
-              <input class="modal__radio" type="radio" name="product-size" value="M" id="size-m">
-              <label for="size-m">M</label>
-            </li>
-            <li class="modal__list-item">
-              <input class="modal__radio" type="radio" name="product-size" value="L" id="size-l">
-              <label for="size-l">L</label>
-            </li>
-          </ul>
-          <button class="modal__submit" type="submit">Добавить</button>
-        </form>
-      </div>
-    </div>
   </main>
 
   <div class="page-footer-wrapper">
@@ -241,6 +217,30 @@
         </a>
       </p>
     </footer>
+  </div>
+
+  <div class="modal display-none">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <form class="modal__size-chart" method="get" action="https://echo.htmlacademy.ru">
+        <ul class="modal__list">
+          <li class="modal__list-item">
+            <input class="modal__radio" type="radio" name="product-size" value="S" id="size-s" checked autofocus>
+            <label for="size-s">S</label>
+          </li>
+          <li class="modal__list-item">
+            <input class="modal__radio" type="radio" name="product-size" value="M" id="size-m">
+            <label for="size-m">M</label>
+          </li>
+          <li class="modal__list-item">
+            <input class="modal__radio" type="radio" name="product-size" value="L" id="size-l">
+            <label for="size-l">L</label>
+          </li>
+        </ul>
+        <button class="modal__submit" type="submit">Добавить</button>
+      </form>
+    </div>
   </div>
 
   <script>
